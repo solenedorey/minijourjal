@@ -1,2 +1,2 @@
-# minijourjal
-test
+# minijournal
+XxSoSoxX
