@@ -26,7 +26,7 @@ class ArticleControleur
         if (method_exists($this, $action)) {
             return $this->$action();
         } else {
-            // que faire si l'actio n'existe pas ??
+            // que faire si l'action n'existe pas ??
             throw new \Exception("Action {$action} non trouvée");
         }
     }
@@ -44,7 +44,6 @@ class ArticleControleur
         $articles = $this->articleBd->lireTous();
         $afficheur = new ArticleHtml();
         $contenu = $afficheur->liste($articles);
-        $contenu .= '<div><a href="index.php?objet=article&amp;action=editer"> Nouvel article</a></div>';
         $this->reponse->ajouterFragment('contenu', $contenu);
     }
 
@@ -66,8 +65,9 @@ class ArticleControleur
         } else {
             $article = Article::creerArticleVide();
         }
-        $afficheur = new ArticleForm($article);
-        $this->reponse->ajouterFragment('contenu', $afficheur->formulaire());
+        $form = new ArticleForm($article);
+        $afficheur = new ArticleHtml();
+        $this->reponse->ajouterFragment('contenu', $afficheur->formulaire($article, $form->getErreurs()));
     }
 
     public function enregistrer()

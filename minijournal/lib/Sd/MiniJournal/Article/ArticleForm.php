@@ -24,15 +24,6 @@ class ArticleForm extends DocumentForm
         return $form;
     }
 
-    public function formulaire()
-    {
-        ob_start();
-        include('theme/lib/Sd/MiniJournal/Article/Vues/form.php');
-        $contenu = ob_get_contents();
-        ob_end_clean();
-        return $contenu;
-    }
-
     public function strategieValidation()
     {
         $validateurManager = new ValidateurManager();

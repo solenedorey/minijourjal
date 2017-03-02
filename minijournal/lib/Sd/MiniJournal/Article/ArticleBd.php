@@ -15,8 +15,10 @@ class ArticleBd extends DocumentBd
 
     public function lire($idArticle)
     {
-        $requete = "SELECT * FROM " . self::TABLE_NAME . " WHERE id_article = :idArticle";
-        $row = parent::requete($requete, array(':idArticle' => $idArticle))[0];
+        $requete = "SELECT * 
+        FROM " . self::TABLE_NAME . " 
+        WHERE id_article = :idArticle";
+        $row = parent::requete($requete, true, array(':idArticle' => $idArticle))[0];
         if ($row == false) {
             throw new \Exception("Article non trouvé en bd");
         }
@@ -35,9 +37,10 @@ class ArticleBd extends DocumentBd
 
     public function lireTous()
     {
-        $requete = "SELECT * FROM " . self::TABLE_NAME;
+        $requete = "SELECT * 
+        FROM " . self::TABLE_NAME;
         $liste = array();
-        $resultats = parent::requete($requete);
+        $resultats = parent::requete($requete, true);
         if($resultats){
             foreach ($resultats as $resultat){
                 $liste[] = new Article(
@@ -57,19 +60,18 @@ class ArticleBd extends DocumentBd
 
     public function enregistrer(Document $article)
     {
-        $requete = "INSERT INTO " . self::TABLE_NAME . " ";
-        $requete .= $this->partieRequete() . ", date_creation=now()";
-        $stmt = $this->db->prepare($requete);
-        return $stmt->execute($this->partieData($article));
+        $requete = "INSERT INTO " . self::TABLE_NAME . " " .
+        $this->partieRequete() . ", date_creation=now()";
+        parent::requete($requete, false, $this->partieData($article));
+        return $this->db->lastInsertId();
     }
 
     public function modifier(Document $article)
     {
         $requete = "UPDATE " . self::TABLE_NAME . " " . $this->partieRequete() . " WHERE id_article=:idArticle";
-        $stmt = $this->db->prepare($requete);
         $data = array('idArticle' => $article->getId());
-        $data = $data + $this->partieData($article);
-        return $stmt->execute($data);
+        $data[] = $this->partieData($article);
+        return parent::requete($requete, false, $data);
     }
 
     protected function partieRequete()
@@ -93,6 +95,6 @@ class ArticleBd extends DocumentBd
     public function supprimer($idArticle)
     {
         $requete = "DELETE FROM " . self::TABLE_NAME . " WHERE id_article=:idArticle";
-        parent::requete($requete, array(':idArticle' => $idArticle));
+        return parent::requete($requete, false, array(':idArticle' => $idArticle));
     }
 }

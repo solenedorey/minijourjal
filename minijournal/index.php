@@ -33,4 +33,4 @@ try {
     header("HTTP/1.0 404 Not Found");
 }
 
-require 'theme/vues/page.html';
+require 'vues/page.html';

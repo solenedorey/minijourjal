@@ -13,23 +13,11 @@ abstract class DocumentBd implements PersistInterface
         $this->db = ConnectionSingleton::getInstance()->getConnexion();
     }
 
-    protected function requete($requete, $param = null)
+    protected function requete($requete, $return, $param = null)
     {
-        $arrayReturn = array();
         $stmt = $this->db->prepare($requete);
-        if ($param != null) {
-            $stmt->execute($param);
-        } else {
-            $stmt->execute();
-        }
-        if ($resultats = $stmt->fetchAll(\PDO::FETCH_ASSOC)) {
-            foreach ($resultats as $row) {
-                array_push($arrayReturn, $row);
-            }
-            return $arrayReturn;
-        } else {
-            return false;
-        }
+        $stmt->execute($param);
+        return $return ? $stmt->fetchAll(\PDO::FETCH_ASSOC) : true;
     }
 
     abstract public function lire($id);
