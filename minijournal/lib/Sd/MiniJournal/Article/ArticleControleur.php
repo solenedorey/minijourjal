@@ -2,10 +2,11 @@
 
 namespace Sd\MiniJournal\Article;
 
+use Sd\Framework\AbstractClasses\AbstractDocumentControleur;
 use Sd\Framework\Tools\Reponse;
 use Sd\Framework\Tools\Requete;
 
-class ArticleControleur
+class ArticleControleur extends AbstractDocumentControleur
 {
     private $articleBd;
     private $requete;
@@ -18,17 +19,6 @@ class ArticleControleur
         $this->requete = $requete;
         $this->reponse = $reponse;
         $this->twig = $twig;
-
-    }
-
-    public function execute($action)
-    {
-        if (method_exists($this, $action)) {
-            return $this->$action();
-        } else {
-            // que faire si l'action n'existe pas ??
-            throw new \Exception("Action {$action} non trouvée");
-        }
     }
 
     public function test()
@@ -63,11 +53,10 @@ class ArticleControleur
             $idArticle = $this->requete->getItemGet('idArticle');
             $article = $this->articleBd->lire($idArticle);
         } else {
-            $article = Article::creerArticleVide();
+            $article = Article::creerDocumentVide();
         }
         $form = new ArticleForm($article);
-        $afficheur = new ArticleHtml();
-        $this->reponse->ajouterFragment('contenu', $afficheur->formulaire($article, $form->getErreurs()));
+        $this->reponse->ajouterFragment('contenu', ArticleHtml::formulaire($article, $form->getErreurs()));
     }
 
     public function enregistrer()
@@ -87,7 +76,7 @@ class ArticleControleur
             $this->reponse->ajouterFragment('contenu', (new ArticleHtml())->article($article));
         } else {
             $this->reponse->ajouterFragment('titre', "Compléter le formulaire");
-            $this->reponse->ajouterFragment('contenu', $form->formulaire());
+            $this->reponse->ajouterFragment('contenu', ArticleHtml::formulaire($article, $form->getErreurs()));
         }
     }
 
@@ -95,6 +84,6 @@ class ArticleControleur
     {
         $idArticle = $_GET['idArticle'];
         $this->articleBd->supprimer($idArticle);
-        header('Location: index.php');
+        header('Location: index.php?objet=article&amp;action=afficherListe');
     }
 }

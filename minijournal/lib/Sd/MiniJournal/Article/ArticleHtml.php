@@ -21,7 +21,7 @@ class ArticleHtml
         return $detailsArticle;
     }
 
-    public function formulaire($article, $erreurs)
+    public static function formulaire($article, $erreurs)
     {
         ob_start();
         include('lib/Sd/MiniJournal/Article/Vues/form.php');

@@ -11,7 +11,7 @@ use Sd\Framework\Tools\Requete;
 use Sd\MiniJournal\Router\Router;
 
 try {
-    $requete = new Requete($_GET, $_POST);
+    $requete = new Requete($_GET, $_POST, $_FILES);
     $reponse = new Reponse();
 
     $router = new Router($requete);

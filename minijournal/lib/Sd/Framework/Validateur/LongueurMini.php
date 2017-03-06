@@ -11,7 +11,7 @@ class LongueurMini implements ValidateurInterface
      * LongueurMini constructor.
      * @param $limit
      */
-    public function __construct($limit=200)
+    public function __construct($limit = 200)
     {
         $this->limit = $limit;
     }

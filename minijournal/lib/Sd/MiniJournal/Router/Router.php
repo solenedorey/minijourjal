@@ -43,6 +43,15 @@ class Router
                 }
                 $this->controllerAction = $action;
                 break;
+            case 'image':
+                $this->controllerClassName = 'Sd\MiniJournal\Image\ImageControleur';
+                try {
+                    class_exists($this->controllerClassName);
+                } catch (Exception $e) {
+                    throw new \Exception("Classe {$this->controllerClassName} non existante");
+                }
+                $this->controllerAction = $action;
+                break;
             default:
                 break;
         }

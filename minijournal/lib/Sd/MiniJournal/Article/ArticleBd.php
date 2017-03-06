@@ -41,8 +41,8 @@ class ArticleBd extends DocumentBd
         FROM " . self::TABLE_NAME;
         $liste = array();
         $resultats = parent::requete($requete, true);
-        if($resultats){
-            foreach ($resultats as $resultat){
+        if ($resultats) {
+            foreach ($resultats as $resultat) {
                 $liste[] = new Article(
                     $resultat['id_article'],
                     $resultat['titre'],
@@ -76,7 +76,8 @@ class ArticleBd extends DocumentBd
 
     protected function partieRequete()
     {
-        $sql = "SET titre=:titre, auteur=:auteur, chapo=:chapo, contenu=:contenu, statut_publication=:statutPublication, date_publication=:datePublication";
+        $sql = "SET titre=:titre, auteur=:auteur, chapo=:chapo, contenu=:contenu, 
+        statut_publication=:statutPublication, date_publication=:datePublication";
         return $sql;
     }
 

@@ -16,7 +16,7 @@ class ValidateurManager
     public function valider($objet)
     {
         $erreurs =array();
-        foreach($this->validateurs as $validateurItem){
+        foreach ($this->validateurs as $validateurItem) {
             $propriete = $validateurItem[0];
             $validateur = $validateurItem[1];
             // le getter est de la forme getTitre

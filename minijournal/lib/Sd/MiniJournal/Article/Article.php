@@ -29,7 +29,7 @@ class Article extends Document
         $this->datePublication = $datePublication;
     }
 
-    public static function creerArticleVide()
+    public static function creerDocumentVide()
     {
         return new self("", "", "", "", "", "", "", "");
     }
@@ -40,7 +40,8 @@ class Article extends Document
         $auteur = isset($data['auteur']) && $data['auteur'] != '' ? $data['auteur'] : '';
         $chapo = isset($data['chapo']) && $data['chapo'] != '' ? $data['chapo'] : '';
         $contenu = isset($data['contenu']) && $data['contenu'] != '' ? $data['contenu'] : '';
-        $statutPublication = isset($data['statutPublication']) && $data['statutPublication'] != '' ? $data['statutPublication'] : '';
+        $statutPublication = isset($data['statutPublication']) &&
+        $data['statutPublication'] != '' ? $data['statutPublication'] : '';
         $dateCreation = date('Y-m-d', time());
         $datePublication = $statutPublication === 2 ? date('Y-m-d', time()) : null;
         return new self(null, $titre, $auteur, $chapo, $contenu, $statutPublication, $dateCreation, $datePublication);
