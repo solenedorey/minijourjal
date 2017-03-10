@@ -3,7 +3,7 @@ namespace Sd\Framework\AbstractClasses;
 
 use Sd\Framework\AppInterfaces\DocumentInterface;
 
-abstract class Document implements DocumentInterface
+abstract class AbstractDocument implements DocumentInterface
 {
     protected $id;
     protected $titre;

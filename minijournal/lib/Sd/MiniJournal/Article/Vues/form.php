@@ -1,6 +1,6 @@
 <form action="index.php?objet=article&amp;action=enregistrer" method="post">
     <?php if (!empty($article->getId())) { ?>
-        <input type="hidden" id="id" name="id" value="<?php echo $article->getId(); ?>" required/>
+        <input type="hidden" id="id" name="id" value="<?php echo $article->getId(); ?>"/>
     <?php } ?>
     <div>
         <label for="titre">Titre</label>

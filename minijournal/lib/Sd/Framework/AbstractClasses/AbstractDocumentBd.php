@@ -4,7 +4,7 @@ namespace Sd\Framework\AbstractClasses;
 use Sd\Framework\AppInterfaces\PersistInterface;
 use Jml\Tools\Database\ConnectionSingleton;
 
-abstract class DocumentBd implements PersistInterface
+abstract class AbstractDocumentBd implements PersistInterface
 {
     protected $db;
 
@@ -24,7 +24,7 @@ abstract class DocumentBd implements PersistInterface
 
     abstract public function lireTous();
 
-    public function persister(Document $document)
+    public function persister(AbstractDocument $document)
     {
         if (is_null($document->getId())) {
             return $this->enregistrer($document);
@@ -33,9 +33,9 @@ abstract class DocumentBd implements PersistInterface
         }
     }
 
-    abstract public function enregistrer(Document $document);
+    abstract public function enregistrer(AbstractDocument $document);
 
-    abstract public function modifier(Document $document);
+    abstract public function modifier(AbstractDocument $document);
 
     abstract public function supprimer($id);
 }

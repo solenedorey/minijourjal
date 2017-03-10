@@ -6,8 +6,8 @@ require 'config/autoload.php';
 spl_autoload_register('autoload');
 
 use Sd\Framework\Controller\FrontController;
-use Sd\Framework\Tools\Reponse;
-use Sd\Framework\Tools\Requete;
+use Sd\Framework\HttpFoundation\Reponse;
+use Sd\Framework\HttpFoundation\Requete;
 use Sd\MiniJournal\Router\Router;
 
 try {

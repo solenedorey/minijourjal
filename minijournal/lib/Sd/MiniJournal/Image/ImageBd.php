@@ -1,10 +1,10 @@
 <?php
 namespace Sd\MiniJournal\Image;
 
-use Sd\Framework\AbstractClasses\Document;
-use Sd\Framework\AbstractClasses\DocumentBd;
+use Sd\Framework\AbstractClasses\AbstractDocument;
+use Sd\Framework\AbstractClasses\AbstractDocumentBd;
 
-class ImageBd extends DocumentBd
+class ImageBd extends AbstractDocumentBd
 {
     const TABLE_NAME = 'image';
 
@@ -52,7 +52,7 @@ class ImageBd extends DocumentBd
         return $liste;
     }
 
-    public function enregistrer(Document $image)
+    public function enregistrer(AbstractDocument $image)
     {
         $requete = "INSERT INTO " . self::TABLE_NAME . " " .
             $this->partieRequete() . ", date_creation=now()";
@@ -60,7 +60,7 @@ class ImageBd extends DocumentBd
         return $this->db->lastInsertId();
     }
 
-    public function modifier(Document $image)
+    public function modifier(AbstractDocument $image)
     {
         $requete = "UPDATE " . self::TABLE_NAME . " " . $this->partieRequete() . " WHERE id_image=:idImage";
         $data = array('idImage' => $image->getId());
@@ -74,7 +74,7 @@ class ImageBd extends DocumentBd
         return $sql;
     }
 
-    protected function partieData(Document $article)
+    protected function partieData(AbstractDocument $article)
     {
         return array(
             'titre' => $article->getTitre(),

@@ -1,9 +1,9 @@
 <?php
 namespace Sd\MiniJournal\Image;
 
-use Sd\Framework\AbstractClasses\Document;
+use Sd\Framework\AbstractClasses\AbstractDocument;
 
-class Image extends Document
+class Image extends AbstractDocument
 {
     private $auteur;
     private $fichier;

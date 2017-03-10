@@ -2,14 +2,14 @@
 
 namespace Sd\MiniJournal\Article;
 
-use Sd\Framework\AbstractClasses\DocumentForm;
+use Sd\Framework\AbstractClasses\AbstractDocumentForm;
 use Sd\Framework\Validateur\ChaineNonVide;
 use Sd\Framework\Validateur\EmailValide;
 use Sd\Framework\Validateur\LongueurMini;
 use Sd\Framework\Validateur\LongueurMaxi;
 use Sd\Framework\Validateur\ValidateurManager;
 
-class ArticleForm extends DocumentForm
+class ArticleForm extends AbstractDocumentForm
 {
     public static function nettoyer($form)
     {

@@ -3,12 +3,12 @@ namespace Sd\Framework\AbstractClasses;
 
 use Sd\Framework\AppInterfaces\FormInterface;
 
-abstract class DocumentForm implements FormInterface
+abstract class AbstractDocumentForm implements FormInterface
 {
     protected $document;
     protected $erreurs;
 
-    public function __construct(Document $document)
+    public function __construct(AbstractDocument $document)
     {
         $this->document = $document;
     }

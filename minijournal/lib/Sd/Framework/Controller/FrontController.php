@@ -3,8 +3,8 @@
 namespace Sd\Framework\Controller;
 
 use Sd\MiniJournal\Router\Router;
-use Sd\Framework\Tools\Reponse;
-use Sd\Framework\Tools\Requete;
+use Sd\Framework\HttpFoundation\Reponse;
+use Sd\Framework\HttpFoundation\Requete;
 
 class FrontController
 {

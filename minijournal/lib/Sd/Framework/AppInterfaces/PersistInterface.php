@@ -1,7 +1,7 @@
 <?php
 namespace Sd\Framework\AppInterfaces;
 
-use Sd\Framework\AbstractClasses\Document;
+use Sd\Framework\AbstractClasses\AbstractDocument;
 
 interface PersistInterface
 {
@@ -9,11 +9,11 @@ interface PersistInterface
 
     public function lireTous();
 
-    public function persister(Document $document);
+    public function persister(AbstractDocument $document);
 
-    public function enregistrer(Document $document);
+    public function enregistrer(AbstractDocument $document);
 
-    public function modifier(Document $document);
+    public function modifier(AbstractDocument $document);
 
     public function supprimer($id);
 }

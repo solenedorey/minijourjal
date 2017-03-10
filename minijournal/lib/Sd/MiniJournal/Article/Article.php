@@ -1,9 +1,9 @@
 <?php
 namespace Sd\MiniJournal\Article;
 
-use Sd\Framework\AbstractClasses\Document;
+use Sd\Framework\AbstractClasses\AbstractDocument;
 
-class Article extends Document
+class Article extends AbstractDocument
 {
     private $auteur;
     private $chapo;

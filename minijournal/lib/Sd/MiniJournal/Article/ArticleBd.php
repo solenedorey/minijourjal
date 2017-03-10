@@ -1,10 +1,10 @@
 <?php
 namespace Sd\MiniJournal\Article;
 
-use Sd\Framework\AbstractClasses\Document;
-use Sd\Framework\AbstractClasses\DocumentBd;
+use Sd\Framework\AbstractClasses\AbstractDocument;
+use Sd\Framework\AbstractClasses\AbstractDocumentBd;
 
-class ArticleBd extends DocumentBd
+class ArticleBd extends AbstractDocumentBd
 {
     const TABLE_NAME = 'article';
 
@@ -58,7 +58,7 @@ class ArticleBd extends DocumentBd
         return $liste;
     }
 
-    public function enregistrer(Document $article)
+    public function enregistrer(AbstractDocument $article)
     {
         $requete = "INSERT INTO " . self::TABLE_NAME . " " .
         $this->partieRequete() . ", date_creation=now()";
@@ -66,11 +66,11 @@ class ArticleBd extends DocumentBd
         return $this->db->lastInsertId();
     }
 
-    public function modifier(Document $article)
+    public function modifier(AbstractDocument $article)
     {
         $requete = "UPDATE " . self::TABLE_NAME . " " . $this->partieRequete() . " WHERE id_article=:idArticle";
-        $data = array('idArticle' => $article->getId());
-        $data[] = $this->partieData($article);
+        $data = $this->partieData($article);
+        $data["idArticle"] = $article->getId();
         return parent::requete($requete, false, $data);
     }
 
@@ -81,7 +81,7 @@ class ArticleBd extends DocumentBd
         return $sql;
     }
 
-    protected function partieData(Document $article)
+    protected function partieData(AbstractDocument $article)
     {
         return array(
             'titre' => $article->getTitre(),

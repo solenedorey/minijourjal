@@ -2,7 +2,7 @@
 
 namespace Sd\MiniJournal\Router;
 
-use Sd\Framework\Tools\Requete;
+use Sd\Framework\HttpFoundation\Requete;
 
 class Router
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Sd\Framework\Tools;
+namespace Sd\Framework\HttpFoundation;
 
 class Reponse
 {

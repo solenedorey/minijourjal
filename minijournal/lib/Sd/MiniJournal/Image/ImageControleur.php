@@ -2,16 +2,35 @@
 namespace Sd\MiniJournal\Image;
 
 use Sd\Framework\AbstractClasses\AbstractDocumentControleur;
-use Sd\Framework\Tools\Reponse;
-use Sd\Framework\Tools\Requete;
+use Sd\Framework\FileManager\FileManager;
+use Sd\Framework\HttpFoundation\Reponse;
+use Sd\Framework\HttpFoundation\Requete;
 
 class ImageControleur extends AbstractDocumentControleur
 {
+    /**
+     * @var ImageBd
+     */
     private $imageBd;
+    /**
+     * @var Requete
+     */
     private $requete;
+    /**
+     * @var Reponse
+     */
     private $reponse;
+    /**
+     * @var
+     */
     private $twig;
 
+    /**
+     * ImageControleur constructor.
+     * @param Requete $requete
+     * @param Reponse $reponse
+     * @param $twig
+     */
     public function __construct(Requete $requete, Reponse $reponse, $twig)
     {
         $this->imageBd = new ImageBd();
@@ -20,6 +39,9 @@ class ImageControleur extends AbstractDocumentControleur
         $this->twig = $twig;
     }
 
+    /**
+     *
+     */
     public function afficherListe()
     {
         $this->reponse->ajouterFragment('titre', "Liste des images");
@@ -29,6 +51,9 @@ class ImageControleur extends AbstractDocumentControleur
         $this->reponse->ajouterFragment('contenu', $contenu);
     }
 
+    /**
+     *
+     */
     public function afficherDetail()
     {
         $this->reponse->ajouterFragment('titre', "Détail de l'image");
@@ -38,13 +63,17 @@ class ImageControleur extends AbstractDocumentControleur
         $this->reponse->ajouterFragment('contenu', $afficheur->image($image));
     }
 
+    /**
+     *
+     */
     public function editer()
     {
-        $this->reponse->ajouterFragment('titre', "Editer l'image");
         if (!is_null($this->requete->getItemGet('idImage'))) {
+            $this->reponse->ajouterFragment('titre', "Modifier l'image");
             $idImage = $this->requete->getItemGet('idImage');
             $image = $this->imageBd->lire($idImage);
         } else {
+            $this->reponse->ajouterFragment('titre', "Editer l'image");
             $image = Image::creerDocumentVide();
         }
         $form = new ImageForm($image);
@@ -52,6 +81,9 @@ class ImageControleur extends AbstractDocumentControleur
         $this->reponse->ajouterFragment('contenu', $afficheur->formulaire($image, $form->getErreurs()));
     }
 
+    /**
+     *
+     */
     public function enregistrer()
     {
         $formData = $this->requete->getPost();
@@ -66,7 +98,9 @@ class ImageControleur extends AbstractDocumentControleur
         }
         $form = new ImageForm($image);
         if ($form->estValide()) {
-
+            $fichier = new FileManager();
+            $fichier = $fichier->upload($formData['fichier']);
+            $image->setFichier($fichier);
             $this->reponse->ajouterFragment('titre', "Enregistrement de l'image");
             $this->imageBd->persister($image) or die("Problème d'enregistrement en BD");
             $this->reponse->ajouterFragment('contenu', (new ImageHtml())->image($image));
@@ -77,9 +111,15 @@ class ImageControleur extends AbstractDocumentControleur
         }
     }
 
+    /**
+     *
+     */
     public function supprimer()
     {
         $idImage = $_GET['idImage'];
+        $image = $this->imageBd->lire($idImage);
+        $path = $image->getFichier();
+        unlink($path);
         $this->imageBd->supprimer($idImage);
         header('Location: index.php?objet=image&amp;action=afficherListe');
     }

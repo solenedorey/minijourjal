@@ -1,7 +1,7 @@
 <?php
 namespace Sd\Framework\AbstractClasses;
 
-abstract class DocumentHtml
+abstract class AbstractDocumentHtml
 {
     protected function getHtmlContent($filePath)
     {

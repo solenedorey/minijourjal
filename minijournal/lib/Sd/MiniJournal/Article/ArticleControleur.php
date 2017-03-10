@@ -3,8 +3,8 @@
 namespace Sd\MiniJournal\Article;
 
 use Sd\Framework\AbstractClasses\AbstractDocumentControleur;
-use Sd\Framework\Tools\Reponse;
-use Sd\Framework\Tools\Requete;
+use Sd\Framework\HttpFoundation\Reponse;
+use Sd\Framework\HttpFoundation\Requete;
 
 class ArticleControleur extends AbstractDocumentControleur
 {

@@ -25,7 +25,7 @@ class ValidateurManager
             if (!method_exists($objet, $getter)) {
                 // si le getter n'existe pas => lever Exception
                 $message = "Méthode {$getter} non existante pour la classe " . get_class($objet);
-                throw new Exception($message);
+                throw new \Exception($message);
             }
             // récupérer la valeur à vérifier
             $value = $objet->$getter();
