@@ -1,6 +1,6 @@
 <?php
 require 'config/config.php';
-require 'twig.php';
+require 'vendor/autoload.php';
 require 'config/autoload.php';
 
 spl_autoload_register('autoload');
@@ -8,6 +8,7 @@ spl_autoload_register('autoload');
 use Sd\Framework\Controller\FrontController;
 use Sd\Framework\HttpFoundation\Reponse;
 use Sd\Framework\HttpFoundation\Requete;
+use Sd\Framework\Twig\Twig;
 use Sd\MiniJournal\Router\Router;
 
 try {
@@ -16,7 +17,7 @@ try {
 
     $router = new Router($requete);
     $controller = new FrontController($router, $requete, $reponse);
-    $controller->execute($twig);
+    $controller->execute((new Twig())->getTwig());
 
     $titre = $reponse->getFragments('titre');
     $contenu = $reponse->getFragments('contenu');

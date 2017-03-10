@@ -32,7 +32,7 @@ class ValidateurManager
 
             if (! $validateur->valider($value)) {
                 // la validation a échoué => ajouter un message d'erreur.
-                $erreurs[$propriete] = $validateur->getMessage();
+                $erreurs[$propriete][] = $validateur->getMessage();
             }
         }
         return $erreurs;

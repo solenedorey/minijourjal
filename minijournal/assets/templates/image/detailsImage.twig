@@ -1,0 +1,16 @@
+{% extends 'page.twig' %}
+
+{% block titre %}
+    Détail de l'image
+{% endblock %}
+
+{% block contenu %}
+    <figure>
+        <figcaption>
+            <h2>{{ image.titre }}</h2>
+            <h3>{{ image.auteur }}</h3>
+            <p>Date de création : {{ image.dateCreation }}</p>
+        </figcaption>
+        <img src="{{ image.fichier }}" alt="{{ image.titre }}">
+    </figure>
+{% endblock %}

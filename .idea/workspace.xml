@@ -2,40 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20ac964d-078d-42ba-92a9-7f5ecc14f268" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/21304033.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/minijournal/config/infoServer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AbstractClasses/AbstractDocumentControleur.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/Image.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/ImageBd.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/ImageControleur.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/ImageForm.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/ImageHtml.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/Vues/details.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/Vues/form.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/Vues/list.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/config/config.php" afterPath="$PROJECT_DIR$/minijournal/config/config.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/minijournal/assets/templates/article/listArticles.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/minijournal/assets/templates/formErrors.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/minijournal/assets/templates/image/detailsImage.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/minijournal/assets/templates/image/formImage.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/minijournal/assets/templates/image/listImages.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Twig/Twig.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/minijournal/twig.php" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/Vues/details.twig" afterPath="$PROJECT_DIR$/minijournal/assets/templates/article/detailsArticle.twig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/Vues/form.twig" afterPath="$PROJECT_DIR$/minijournal/assets/templates/article/formArticle.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/vendor/ckeditor/ckeditor" afterPath="$PROJECT_DIR$/minijournal/vendor/ckeditor/ckeditor" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/config/infoServer.php" afterPath="$PROJECT_DIR$/minijournal/config/infoServer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/index.php" afterPath="$PROJECT_DIR$/minijournal/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AbstractClasses/DocumentBd.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AbstractClasses/DocumentBd.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AbstractClasses/DocumentForm.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AbstractClasses/DocumentForm.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AbstractClasses/DocumentHtml.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AbstractClasses/DocumentHtml.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AppInterfaces/DocumentInterface.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AppInterfaces/DocumentInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AppInterfaces/FormInterface.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AppInterfaces/FormInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AppInterfaces/HtmlInterface.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AppInterfaces/HtmlInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AppInterfaces/PersistInterface.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AppInterfaces/PersistInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Tools/Requete.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Tools/Requete.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Validateur/LongueurMaxi.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Validateur/LongueurMaxi.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Validateur/LongueurMini.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Validateur/LongueurMini.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Validateur/ValidateurManager.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Validateur/ValidateurManager.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/Article.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/Article.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/ArticleBd.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/ArticleBd.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/ArticleControleur.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/ArticleControleur.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/ArticleHtml.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/ArticleHtml.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/Vues/details.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/Vues/details.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/Vues/form.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/Vues/form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/Vues/list.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/Vues/list.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Router/Router.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Router/Router.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -61,68 +42,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="form.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/Vues/form.php">
+      <file leaf-file-name="infoServer.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/minijournal/config/infoServer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="21" column="10" lean-forward="true" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+            <state relative-caret-position="36">
+              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="details.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/Vues/details.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/Vues/list.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="64" lean-forward="false" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Image.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/Image.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="39" column="34" lean-forward="true" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImageControleur.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/ImageControleur.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="534">
-              <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImageBd.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/ImageBd.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="79" column="37" lean-forward="true" selection-start-line="79" selection-start-column="37" selection-end-line="79" selection-end-column="37" />
-              <folding>
-                <element signature="e#39#81#0#PHP" expanded="true" />
-                <marker date="1488551726000" expanded="true" signature="335:417" ph="SELECT * FRO... ${self::TABLE_NAME}" />
-                <marker date="1488551726000" expanded="true" signature="876:899" ph="SELECT * FRO... ${self::TABLE_NAME}" />
-                <marker date="1488551726000" expanded="true" signature="1474:1574" ph="INSERT INTO ${self::TABLE_NAME}... " />
-                <marker date="1488551726000" expanded="true" signature="2464:2524" ph="DELETE FROM " />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -134,6 +59,7 @@
       <find>)</find>
       <find>article</find>
       <find>articles</find>
+      <find>Document</find>
     </findStrings>
     <replaceStrings>
       <replace>document</replace>
@@ -147,57 +73,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/minijournal/theme/lib/Sd/MiniJournal/Article/Article.php" />
-        <option value="$PROJECT_DIR$/minijournal/theme/lib/Sd/Framework/Validateur/ValidateurManager.php" />
-        <option value="$PROJECT_DIR$/minijournal/theme/lib/Sd/Framework/Validateur/ChaineNonVide.php" />
-        <option value="$PROJECT_DIR$/minijournal/theme/lib/Sd/Framework/Validateur/LongueurMaxi.php" />
-        <option value="$PROJECT_DIR$/minijournal/theme/lib/Sd/Framework/Validateur/LongueurMini.php" />
-        <option value="$PROJECT_DIR$/minijournal/theme/lib/Sd/MiniJournal/Article/Vues/form.php" />
-        <option value="$PROJECT_DIR$/minijournal/theme/lib/Sd/Framework/Validateur/EmailValide.php" />
-        <option value="$PROJECT_DIR$/minijournal/theme/lib/Sd/MiniJournal/Article/ArticleForm.php" />
-        <option value="$PROJECT_DIR$/minijournal/theme/lib/Sd/Framework/AbstractClasses/DocumentForm.php" />
-        <option value="$PROJECT_DIR$/minijournal/theme/lib/Sd/MiniJournal/Article/ArticleControleur.php" />
-        <option value="$PROJECT_DIR$/minijournal/theme/lib/Sd/Framework/AbstractClasses/DocumentBd.php" />
-        <option value="$PROJECT_DIR$/minijournal/theme/lib/Sd/MiniJournal/Article/ArticleBd.php" />
-        <option value="$PROJECT_DIR$/minijournal/config/config.php" />
-        <option value="$PROJECT_DIR$/minijournal/twig.php" />
-        <option value="$PROJECT_DIR$/minijournal/vues/page.html" />
-        <option value="$PROJECT_DIR$/minijournal/assets/templates/page.twig" />
         <option value="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/Vues/details.twig" />
-        <option value="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/ArticleForm.php" />
-        <option value="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/Vues/form.twig" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AbstractClasses/DocumentBd.php" />
         <option value="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AbstractClasses/DocumentForm.php" />
-        <option value="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AppInterfaces/PersistInterface.php" />
         <option value="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AppInterfaces/HtmlInterface.php" />
         <option value="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AppInterfaces/FormInterface.php" />
         <option value="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Validateur/LongueurMini.php" />
         <option value="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Validateur/LongueurMaxi.php" />
         <option value="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/Vues/details.php" />
-        <option value="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/ArticleBd.php" />
         <option value="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AbstractClasses/DocumentHtml.php" />
-        <option value="$PROJECT_DIR$/minijournal/config/infoServer.php" />
         <option value="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AppInterfaces/DocumentInterface.php" />
-        <option value="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/Article.php" />
         <option value="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AbstractClasses/AbstractDocumentControleur.php" />
-        <option value="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/ImageForm.php" />
         <option value="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/ImageHtml.php" />
         <option value="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/Vues/list.php" />
-        <option value="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/Vues/list.php" />
-        <option value="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Router/Router.php" />
-        <option value="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Controller/FrontController.php" />
         <option value="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/ArticleHtml.php" />
-        <option value="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Validateur/ValidateurManager.php" />
-        <option value="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/Vues/form.php" />
-        <option value="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/ArticleControleur.php" />
         <option value="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/Vues/form.php" />
         <option value="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/Vues/details.php" />
-        <option value="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/ImageBd.php" />
-        <option value="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/Image.php" />
-        <option value="$PROJECT_DIR$/minijournal/index.php" />
         <option value="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Tools/Requete.php" />
+        <option value="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AbstractClasses/Document.php" />
+        <option value="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AbstractClasses/AbstractDocument.php" />
+        <option value="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/ImageBd.php" />
+        <option value="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AbstractClasses/AbstractDocumentForm.php" />
+        <option value="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AppInterfaces/PersistInterface.php" />
+        <option value="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AbstractClasses/AbstractDocumentHtml.php" />
+        <option value="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/Article.php" />
+        <option value="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/ArticleForm.php" />
+        <option value="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/ArticleControleur.php" />
+        <option value="$PROJECT_DIR$/minijournal/lib/Sd/Framework/HttpFoundation/Reponse.php" />
+        <option value="$PROJECT_DIR$/minijournal/lib/Sd/Framework/HttpFoundation/Requete.php" />
+        <option value="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Router/Router.php" />
+        <option value="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Controller/FrontController.php" />
+        <option value="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/ImageForm.php" />
+        <option value="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/Image.php" />
+        <option value="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/ArticleBd.php" />
+        <option value="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AbstractClasses/AbstractDocumentBd.php" />
+        <option value="$PROJECT_DIR$/minijournal/lib/Sd/Framework/FileManager/FileManager.php" />
         <option value="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/ImageControleur.php" />
+        <option value="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Validateur/ValidateurManager.php" />
+        <option value="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/Vues/list.php" />
+        <option value="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/Vues/list.twig" />
+        <option value="$PROJECT_DIR$/minijournal/assets/templates/formErrors.twig" />
+        <option value="$PROJECT_DIR$/minijournal/twig.php" />
+        <option value="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Twig/Twig.php" />
+        <option value="$PROJECT_DIR$/minijournal/index.php" />
+        <option value="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/Vues/form.php" />
+        <option value="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/Vues/form.twig" />
+        <option value="$PROJECT_DIR$/minijournal/assets/templates/image/detailsImage.twig" />
+        <option value="$PROJECT_DIR$/minijournal/assets/templates/article/formArticle.twig" />
+        <option value="$PROJECT_DIR$/minijournal/assets/templates/image/formImage.twig" />
+        <option value="$PROJECT_DIR$/minijournal/assets/templates/image/listImages.twig" />
+        <option value="$PROJECT_DIR$/minijournal/config/infoServer.php" />
       </list>
     </option>
   </component>
@@ -272,15 +198,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Sd" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MiniJournal" />
+              <option name="myItemId" value="vendor" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -307,44 +225,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="MiniJournal" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Image" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TP9" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TP9" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="minijournal" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Sd" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MiniJournal" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Image" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vues" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -400,7 +280,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Tools" />
+              <option name="myItemId" value="Twig" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -419,13 +299,123 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TP9" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TP9" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="minijournal" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TP9" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TP9" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="minijournal" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TP9" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TP9" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="minijournal" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="image" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TP9" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TP9" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="minijournal" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="article" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TP9" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TP9" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="minijournal" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -437,19 +427,19 @@
     <property name="SearchEverywhereHistoryKey" value="ter&#9;ACTION&#9;ActivateTerminalToolWindow" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/minijournal/assets/templates/image" />
+      <recent name="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/Vues" />
+      <recent name="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/Vues" />
+      <recent name="$PROJECT_DIR$/minijournal/vues" />
+      <recent name="$PROJECT_DIR$/minijournal/theme/lib/Sd/Framework/Validateur" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/minijournal/assets/templates/article" />
       <recent name="$PROJECT_DIR$/minijournal/assets/templates" />
       <recent name="$PROJECT_DIR$/minijournal" />
       <recent name="$PROJECT_DIR$/minijournal/assets" />
       <recent name="$PROJECT_DIR$/minijournal/theme/lib/Sd/Framework/Validateur" />
-      <recent name="$PROJECT_DIR$/minijournal/theme" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/Vues" />
-      <recent name="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/Vues" />
-      <recent name="$PROJECT_DIR$/minijournal/vues" />
-      <recent name="$PROJECT_DIR$/minijournal/theme/lib/Sd/Framework/Validateur" />
-      <recent name="$PROJECT_DIR$/minijournal/theme/lib/Sd/MiniJournal" />
     </key>
   </component>
   <component name="RunManager">
@@ -531,6 +521,11 @@
       <workItem from="1488531122632" duration="2137000" />
       <workItem from="1488533862282" duration="4948000" />
       <workItem from="1488543187617" duration="6643000" />
+      <workItem from="1488801967733" duration="12383000" />
+      <workItem from="1488821734120" duration="3878000" />
+      <workItem from="1488881520214" duration="1668000" />
+      <workItem from="1489137960787" duration="4583000" />
+      <workItem from="1489146556504" duration="9878000" />
     </task>
     <task id="LOCAL-00001" summary="Twig commencé&#10;">
       <created>1488478592480</created>
@@ -543,7 +538,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39378000" />
+    <option name="totallyTimeSpent" value="71768000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -558,14 +553,13 @@
     <frame x="65" y="24" width="1615" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2495356" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19814241" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32912722" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32948583" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32912722" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32912722" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -573,6 +567,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32912722" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -592,34 +587,32 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/minijournal/assets/templates/page.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="28" lean-forward="false" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/Vues/details.twig">
+    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/Framework/AppInterfaces/FormInterface.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
-          <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="31" />
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/Vues/form.twig">
+    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/Framework/AppInterfaces/DocumentInterface.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="162">
+          <caret line="9" column="34" lean-forward="false" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/minijournal/theme/lib/Sd/MiniJournal/Actualités/Vues/form.php" />
-    <entry file="file://$PROJECT_DIR$/minijournal/theme/lib/Sd/Framework/AppInterfaces/AfficheurHtml.php" />
-    <entry file="file://$PROJECT_DIR$/minijournal/theme/lib/Sd/MiniJournal/Actualités/ArticleBd.php" />
     <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/Framework/AppInterfaces/ValidateurInterface.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/Framework/AppInterfaces/PersistInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -637,90 +630,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/minijournal/config/autoload.php">
+    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/Framework/Validateur/LongueurMaxi.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minijournal/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minijournal/twig.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minijournal/vues/page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minijournal/assets/templates/index.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="65" lean-forward="false" selection-start-line="0" selection-start-column="48" selection-end-line="0" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minijournal/assets/templates/page.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="28" lean-forward="false" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/Framework/AppInterfaces/FormInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/Framework/AppInterfaces/HtmlInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/Framework/AppInterfaces/PersistInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/Vues/form.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="84" lean-forward="false" selection-start-line="18" selection-start-column="84" selection-end-line="18" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/Vues/details.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="31" />
+        <state relative-caret-position="504">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -728,140 +641,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/Framework/Validateur/LongueurMaxi.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/Vues/details.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/Framework/AbstractClasses/DocumentHtml.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minijournal/config/infoServer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="10" lean-forward="true" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/Framework/AppInterfaces/DocumentInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="34" lean-forward="false" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/ArticleBd.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="73" column="55" lean-forward="true" selection-start-line="73" selection-start-column="55" selection-end-line="73" selection-end-column="55" />
-          <folding>
-            <element signature="e#41#83#0#PHP" expanded="false" />
-            <marker date="1488532179000" expanded="true" signature="343:429" ph="SELECT * FRO... ${self::TABLE_NAME}" />
-            <marker date="1488532179000" expanded="true" signature="1006:1029" ph="SELECT * FRO... ${self::TABLE_NAME}" />
-            <marker date="1488532179000" expanded="true" signature="1754:1850" ph="INSERT INTO ${self::TABLE_NAME}... " />
-            <marker date="1488532179000" expanded="true" signature="3032:3096" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/Article.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-72">
-          <caret line="53" column="9" lean-forward="true" selection-start-line="51" selection-start-column="8" selection-end-line="56" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/Vues/list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/Framework/Controller/FrontController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="31" column="61" lean-forward="false" selection-start-line="31" selection-start-column="61" selection-end-line="31" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Router/Router.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="32" column="65" lean-forward="false" selection-start-line="32" selection-start-column="65" selection-end-line="32" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/ArticleForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="35" column="56" lean-forward="true" selection-start-line="35" selection-start-column="56" selection-end-line="35" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/Framework/Validateur/ValidateurManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="36" column="9" lean-forward="false" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/Framework/AbstractClasses/DocumentForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="32" column="37" lean-forward="true" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/Framework/AbstractClasses/DocumentBd.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="24" column="40" lean-forward="true" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/ArticleHtml.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="54" lean-forward="false" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/Vues/form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="30" column="45" lean-forward="false" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -873,12 +652,249 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/Framework/HttpFoundation/Requete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="37" lean-forward="false" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/Framework/HttpFoundation/Reponse.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="23" lean-forward="false" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/Article.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="3" column="50" lean-forward="false" selection-start-line="3" selection-start-column="50" selection-end-line="3" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minijournal/config/autoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/ImageForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="44" lean-forward="false" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
+          <folding>
+            <element signature="e#39#93#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/Framework/Controller/FrontController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="31" lean-forward="false" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Router/Router.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="31" lean-forward="false" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/ArticleBd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="70" column="112" lean-forward="false" selection-start-line="70" selection-start-column="112" selection-end-line="70" selection-end-column="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/ArticleForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/Framework/AbstractClasses/AbstractDocument.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="31" lean-forward="false" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/Framework/AbstractClasses/AbstractDocumentForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/Image.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="42" column="27" lean-forward="false" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/Framework/AppInterfaces/HtmlInterface.php" />
+    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/ArticleHtml.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="17" lean-forward="true" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/Framework/AbstractClasses/AbstractDocumentHtml.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="42" lean-forward="true" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/Framework/AbstractClasses/AbstractDocumentBd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="17" column="45" lean-forward="false" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/ImageBd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="29" column="33" lean-forward="true" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+          <folding>
+            <element signature="e#39#89#0#PHP" expanded="true" />
+            <marker date="1488805156000" expanded="true" signature="359:441" ph="SELECT * FRO... ${self::TABLE_NAME}" />
+            <marker date="1488805156000" expanded="true" signature="900:923" ph="SELECT * FRO... ${self::TABLE_NAME}" />
+            <marker date="1488805156000" expanded="true" signature="1506:1606" ph="INSERT INTO ${self::TABLE_NAME}... " />
+            <marker date="1488805156000" expanded="true" signature="2512:2572" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minijournal/assets/media/images/img_58be89f92b20c.jpeg" />
+    <entry file="file://$PROJECT_DIR$/minijournal/assets/media/images/img_58be8b6d5fc63.jpeg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/Framework/FileManager/FileManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="25" lean-forward="false" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/ImageControleur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="94" column="53" lean-forward="true" selection-start-line="94" selection-start-column="53" selection-end-line="94" selection-end-column="53" />
+          <folding>
+            <element signature="e#39#99#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minijournal/assets/templates/page.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/Vues/details.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="10" lean-forward="false" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minijournal/assets/templates/article/listArticles.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="25" column="14" lean-forward="true" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/Vues/list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/Framework/Validateur/ValidateurManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="34" column="67" lean-forward="false" selection-start-line="34" selection-start-column="67" selection-end-line="34" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minijournal/assets/templates/index.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="65" lean-forward="false" selection-start-line="0" selection-start-column="48" selection-end-line="0" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minijournal/twig.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/Vues/form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="36" column="31" lean-forward="true" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minijournal/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="67" lean-forward="true" selection-start-line="18" selection-start-column="67" selection-end-line="18" selection-end-column="67" />
+          <folding>
+            <element signature="e#134#178#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minijournal/assets/templates/formErrors.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="9" lean-forward="true" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/Framework/Twig/Twig.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="27" lean-forward="true" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/ArticleControleur.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="8" column="58" lean-forward="false" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="58" />
+        <state relative-caret-position="468">
+          <caret line="26" column="35" lean-forward="true" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
           <folding>
-            <element signature="e#42#102#0#PHP" expanded="false" />
+            <element signature="e#42#102#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -886,7 +902,47 @@
     <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/Vues/details.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
-          <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+          <caret line="6" column="95" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="95" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minijournal/assets/templates/article/detailsArticle.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="43" lean-forward="false" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minijournal/assets/templates/article/formArticle.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="69" lean-forward="false" selection-start-line="9" selection-start-column="69" selection-end-line="9" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/Vues/form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minijournal/assets/templates/image/formImage.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="71" lean-forward="true" selection-start-line="9" selection-start-column="71" selection-end-line="9" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minijournal/assets/templates/image/detailsImage.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -894,85 +950,23 @@
     <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/Vues/list.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="15" column="64" lean-forward="false" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="80" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/ImageHtml.php">
+    <entry file="file://$PROJECT_DIR$/minijournal/assets/templates/image/listImages.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="26" column="51" lean-forward="false" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
+        <state relative-caret-position="396">
+          <caret line="22" column="84" lean-forward="false" selection-start-line="22" selection-start-column="84" selection-end-line="22" selection-end-column="84" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/Vues/form.php">
+    <entry file="file://$PROJECT_DIR$/minijournal/config/infoServer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="10" lean-forward="true" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/Framework/AbstractClasses/Document.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="20" lean-forward="false" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/Image.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="39" column="34" lean-forward="true" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/ImageBd.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="79" column="37" lean-forward="true" selection-start-line="79" selection-start-column="37" selection-end-line="79" selection-end-column="37" />
-          <folding>
-            <element signature="e#39#81#0#PHP" expanded="true" />
-            <marker date="1488551726000" expanded="true" signature="335:417" ph="SELECT * FRO... ${self::TABLE_NAME}" />
-            <marker date="1488551726000" expanded="true" signature="876:899" ph="SELECT * FRO... ${self::TABLE_NAME}" />
-            <marker date="1488551726000" expanded="true" signature="1474:1574" ph="INSERT INTO ${self::TABLE_NAME}... " />
-            <marker date="1488551726000" expanded="true" signature="2464:2524" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/Framework/Tools/Requete.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="51" lean-forward="false" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minijournal/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/ImageForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/ImageControleur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+        <state relative-caret-position="36">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>

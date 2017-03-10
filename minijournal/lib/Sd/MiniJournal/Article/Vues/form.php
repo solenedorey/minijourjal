@@ -24,7 +24,7 @@
     </div>
     <div>
         <label for="statutPublication">Statut de publication</label>
-        <select id="statutPublication" name="statutPublication" required>
+        <select id="statutPublication" name="statutPublication">
             <option value="1" <?= $article->getStatutPublication() === '1' ? 'selected' : null ?>>Brouillon</option>
             <option value="2" <?= $article->getStatutPublication() === '2' ? 'selected' : null ?>>Publié</option>
         </select>

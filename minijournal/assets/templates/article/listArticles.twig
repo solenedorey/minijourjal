@@ -1,0 +1,26 @@
+{% extends 'page.twig' %}
+
+{% block titre %}
+    Liste des articles
+{% endblock %}
+
+{% block contenu %}
+
+    {% if article is empty %}
+        <p>Aucun article</p>
+    {% else %}
+        <ul>
+            {% for article is article %}
+                <li>
+                    <a href="index.php?objet=article&amp;action=afficherDetail&amp;idArticle={{ article.id }}">
+                        {{ article.titre }}
+                    </a>
+                    <a href="index.php?objet=article&amp;action=editer&amp;idArticle={{ article.id }}"> - Modifier -</a>
+                    <a href="index.php?objet=article&amp;action=supprimer&amp;idArticle={{ article.id }}"> Supprimer
+                        -</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <div><a href="index.php?objet=article&amp;action=editer">Nouvel article</a></div>
+{% endblock %}

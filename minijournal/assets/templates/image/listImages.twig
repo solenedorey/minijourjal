@@ -1,0 +1,24 @@
+{% extends 'page.twig' %}
+
+{% block titre %}
+    Liste des images
+{% endblock %}
+
+{% block contenu %}
+
+    {% if image is empty %}
+        <p>Aucune image</p>
+    {% else %}
+        <ul>
+            {% for image is images %}
+                <li>
+                    <a href="index.php?objet=image&amp;action=afficherDetail&amp;
+            idImage={{ image.id }}">{{ image.titre }}</a>
+                    <a href="index.php?objet=image&amp;action=editer&amp;idImage={{ image.id }}"> - Modifier -</a>
+                    <a href="index.php?objet=image&amp;action=supprimer&amp;idImage={{ image.id }}"> Supprimer -</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <div><a href="index.php?objet=image&amp;action=editer"> Nouvelle image</a></div>
+{% endblock %}
