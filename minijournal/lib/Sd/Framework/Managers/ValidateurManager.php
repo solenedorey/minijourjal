@@ -1,5 +1,5 @@
 <?php
-namespace Sd\Framework\Validateur;
+namespace Sd\Framework\Managers;
 
 use Sd\Framework\AppInterfaces\ValidateurInterface;
 

@@ -5,12 +5,11 @@
 {% endblock %}
 
 {% block contenu %}
-
-    {% if image is empty %}
+    {% if images is empty %}
         <p>Aucune image</p>
     {% else %}
         <ul>
-            {% for image is images %}
+            {% for image in images %}
                 <li>
                     <a href="index.php?objet=image&amp;action=afficherDetail&amp;
             idImage={{ image.id }}">{{ image.titre }}</a>

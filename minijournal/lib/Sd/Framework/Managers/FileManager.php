@@ -1,5 +1,5 @@
 <?php
-namespace Sd\Framework\FileManager;
+namespace Sd\Framework\Managers;
 
 class FileManager
 {
@@ -9,9 +9,10 @@ class FileManager
         $newName = $this->creerNomUnique('img_') . $extension;
         $newPath = 'assets' . DIRECTORY_SEPARATOR . 'media' . DIRECTORY_SEPARATOR . 'images';
         $fullPath = $newPath . DIRECTORY_SEPARATOR . $newName;
-        if (is_dir($newPath)) {
-            move_uploaded_file($tmp_name, $fullPath);
+        if (!is_dir($newPath)) {
+            mkdir($newPath, 0777, true);
         }
+        move_uploaded_file($tmp_name, $fullPath);
         return $fullPath;
     }
 

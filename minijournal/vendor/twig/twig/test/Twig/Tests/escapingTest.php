@@ -270,7 +270,8 @@ class Twig_Test_EscapingTest extends PHPUnit_Framework_TestCase
                     $this->assertNotEquals(
                         $literal,
                         twig_escape_filter($this->env, $literal, 'js'),
-                        "$literal should be escaped!");
+                        "$literal should be escaped!"
+                    );
                 }
             }
         }
@@ -293,7 +294,8 @@ class Twig_Test_EscapingTest extends PHPUnit_Framework_TestCase
                     $this->assertNotEquals(
                         $literal,
                         twig_escape_filter($this->env, $literal, 'html_attr'),
-                        "$literal should be escaped!");
+                        "$literal should be escaped!"
+                    );
                 }
             }
         }
@@ -313,7 +315,8 @@ class Twig_Test_EscapingTest extends PHPUnit_Framework_TestCase
                 $this->assertNotEquals(
                     $literal,
                     twig_escape_filter($this->env, $literal, 'css'),
-                    "$literal should be escaped!");
+                    "$literal should be escaped!"
+                );
             }
         }
     }

@@ -130,8 +130,7 @@ class Twig_NodeVisitor_Optimizer extends Twig_BaseNodeVisitor
         }
 
         $exprNode = $node->getNode('expr');
-        if (
-            $exprNode instanceof Twig_Node_Expression_BlockReference ||
+        if ($exprNode instanceof Twig_Node_Expression_BlockReference ||
             $exprNode instanceof Twig_Node_Expression_Parent
         ) {
             $exprNode->setAttribute('output', true);
@@ -170,32 +169,22 @@ class Twig_NodeVisitor_Optimizer extends Twig_BaseNodeVisitor
         } elseif (!$this->loops) {
             // we are outside a loop
             return;
-        }
-
-        // when do we need to add the loop variable back?
+        } // when do we need to add the loop variable back?
 
         // the loop variable is referenced for the current loop
         elseif ($node instanceof Twig_Node_Expression_Name && 'loop' === $node->getAttribute('name')) {
             $node->setAttribute('always_defined', true);
             $this->addLoopToCurrent();
-        }
-
-        // optimize access to loop targets
+        } // optimize access to loop targets
         elseif ($node instanceof Twig_Node_Expression_Name && in_array($node->getAttribute('name'), $this->loopsTargets)) {
             $node->setAttribute('always_defined', true);
-        }
-
-        // block reference
+        } // block reference
         elseif ($node instanceof Twig_Node_BlockReference || $node instanceof Twig_Node_Expression_BlockReference) {
             $this->addLoopToCurrent();
-        }
-
-        // include without the only attribute
+        } // include without the only attribute
         elseif ($node instanceof Twig_Node_Include && !$node->getAttribute('only')) {
             $this->addLoopToAll();
-        }
-
-        // include function without the with_context=false parameter
+        } // include function without the with_context=false parameter
         elseif ($node instanceof Twig_Node_Expression_Function
             && 'include' === $node->getAttribute('name')
             && (!$node->getNode('arguments')->hasNode('with_context')
@@ -203,9 +192,7 @@ class Twig_NodeVisitor_Optimizer extends Twig_BaseNodeVisitor
                )
         ) {
             $this->addLoopToAll();
-        }
-
-        // the loop variable is referenced via an attribute
+        } // the loop variable is referenced via an attribute
         elseif ($node instanceof Twig_Node_Expression_GetAttr
             && (!$node->getNode('attribute') instanceof Twig_Node_Expression_Constant
                 || 'parent' === $node->getNode('attribute')->getAttribute('value')

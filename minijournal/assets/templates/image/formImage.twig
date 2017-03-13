@@ -11,21 +11,21 @@
         {% endif %}
         <div>
             <label for="titre">Titre</label>
-            <input type="text" id="titre" name="titre" value="<?php echo $image->getTitre(); ?>" required/>
-            {% erreurs.titre is defined ? display_errors(erreurs.titre) : null %}
+            <input type="text" id="titre" name="titre" value="{{ image.titre }}" required/>
+            {{ erreurs.titre is defined ? display_errors(erreurs.titre) : null }}
         </div>
         <div>
             <label for="auteur">Auteur</label>
-            <input type="text" id="auteur" name="auteur" value="<?php echo $image->getAuteur(); ?>" required/>
-            {% erreurs.auteur is defined ? display_errors(erreurs.auteur) : null %}
+            <input type="text" id="auteur" name="auteur" value="{{ image.auteur }}" required/>
+            {{ erreurs.auteur is defined ? display_errors(erreurs.auteur) : null }}
         </div>
         <div>
             <label for="auteur">Image</label>
             <input type="file" id="fichier" name="fichier"/>
-            {% erreurs.fichier is defined ? display_errors(erreurs.fichier) : null %}
+            {{ erreurs.fichier is defined ? display_errors(erreurs.fichier) : null }}
         </div>
         <div class="button">
-            <button type="submit">{% image.id is not empty ? 'Modifier' : 'Enregistrer' %}</button>
+            <button type="submit">{{ image.id is not empty ? 'Modifier' : 'Enregistrer' }}</button>
         </div>
     </form>
 {% endblock %}

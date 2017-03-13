@@ -149,8 +149,13 @@ abstract class Twig_Node_Expression_Call extends Twig_Node_Expression
                 if (count($missingArguments)) {
                     throw new Twig_Error_Syntax(sprintf(
                         'Argument "%s" could not be assigned for %s "%s(%s)" because it is mapped to an internal PHP function which cannot determine default value for optional argument%s "%s".',
-                        $name, $callType, $callName, implode(', ', $names), count($missingArguments) > 1 ? 's' : '', implode('", "', $missingArguments))
-                    );
+                        $name,
+                        $callType,
+                        $callName,
+                        implode(', ', $names),
+                        count($missingArguments) > 1 ? 's' : '',
+                        implode('", "', $missingArguments)
+                    ));
                 }
 
                 $arguments = array_merge($arguments, $optionalArguments);
@@ -204,7 +209,11 @@ abstract class Twig_Node_Expression_Call extends Twig_Node_Expression
 
             throw new Twig_Error_Syntax(sprintf(
                 'Unknown argument%s "%s" for %s "%s(%s)".',
-                count($parameters) > 1 ? 's' : '', implode('", "', array_keys($parameters)), $callType, $callName, implode(', ', $names)
+                count($parameters) > 1 ? 's' : '',
+                implode('", "', array_keys($parameters)),
+                $callType,
+                $callName,
+                implode(', ', $names)
             ), $unknownParameter ? $unknownParameter->getTemplateLine() : -1);
         }
 

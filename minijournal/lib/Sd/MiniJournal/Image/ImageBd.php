@@ -63,8 +63,8 @@ class ImageBd extends AbstractDocumentBd
     public function modifier(AbstractDocument $image)
     {
         $requete = "UPDATE " . self::TABLE_NAME . " " . $this->partieRequete() . " WHERE id_image=:idImage";
-        $data = array('idImage' => $image->getId());
-        $data[] = $this->partieData($image);
+        $data = $this->partieData($image);
+        $data["idImage"] = $image->getId();
         return parent::requete($requete, false, $data);
     }
 

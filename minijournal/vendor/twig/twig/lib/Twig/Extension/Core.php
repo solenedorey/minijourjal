@@ -1329,8 +1329,7 @@ if (function_exists('mb_get_info')) {
 
         return ucfirst(strtolower($string));
     }
-}
-// and byte fallback
+} // and byte fallback
 else {
     /**
      * Returns the length of a variable.

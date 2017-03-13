@@ -7,38 +7,38 @@
 {% block contenu %}
     <form action="index.php?objet=article&amp;action=enregistrer" method="post">
         {% if article.id is not empty %}
-        <input type="hidden" id="id" name="id" value="{{ image.id }}"/>
+        <input type="hidden" id="id" name="id" value="{{ article.id }}"/>
         {% endif %}
         <div>
             <label for="titre">Titre</label>
             <input type="text" id="titre" name="titre" value="{{ article.titre }}" required/>
-            {% erreurs.titre is defined ? display_errors(erreurs.titre) : null %}
+            {{ erreurs.titre is defined ? display_errors(erreurs.titre) : null }}
         </div>
         <div>
             <label for="auteur">Auteur</label>
             <input type="text" id="auteur" name="auteur" value="{{ article.auteur }}" required/>
-            {% erreurs.auteur is defined ? display_errors(erreurs.auteur) : null %}
+            {{ erreurs.auteur is defined ? display_errors(erreurs.auteur) : null }}
         </div>
         <div>
             <label for="chapo">Chapo</label>
             <input type="text" id="chapo" name="chapo" value="{{ article.chapo }}" required/>
-            {% erreurs.chapo is defined ? display_errors(erreurs.chapo) : null %}
+            {{ erreurs.chapo is defined ? display_errors(erreurs.chapo) : null }}
         </div>
         <div>
             <label for="contenu">Contenu principal</label>
             <textarea id="contenu" name="contenu" required>{{ article.contenu }}</textarea>
-            {% erreurs.contenu is defined ? display_errors(erreurs.contenu) : null %}
+            {{ erreurs.contenu is defined ? display_errors(erreurs.contenu) : null }}
         </div>
         <div>
             <label for="statutPublication">Statut de publication</label>
             <select id="statutPublication" name="statutPublication">
-                <option value="1" {% article.statutPublication === '1' ? 'selected' : null %}>Brouillon</option>
-                <option value="2" {% article.statutPublication === '2' ? 'selected' : null %}>Publié</option>
+                <option value="1" {{ article.statutPublication == '1' ? 'selected' : null }}>Brouillon</option>
+                <option value="2" {{ article.statutPublication == '2' ? 'selected' : null }}>Publié</option>
             </select>
-            {% erreurs.statutPublication is defined ? display_errors(erreurs.statutPublication) : null %}
+            {{ erreurs.statutPublication is defined ? display_errors(erreurs.statutPublication) : null }}
         </div>
         <div class="button">
-            <button type="submit">{% article.id is not empty ? 'Modifier' : 'Enregistrer' %}</button>
+            <button type="submit">{{ article.id is not empty ? 'Modifier' : 'Enregistrer' }}</button>
         </div>
     </form>
     <script type="text/javascript">

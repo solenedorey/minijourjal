@@ -27,10 +27,10 @@ class FrontController
     /**
      * @return mixed
      */
-    public function execute($twig)
+    public function execute()
     {
         $className = $this->router->getControllerClassName();
-        $controller = new $className($this->request, $this->response, $twig);
+        $controller = new $className($this->request, $this->response);
         $action = $this->router->getControllerAction();
         $controller->execute($action);
     }

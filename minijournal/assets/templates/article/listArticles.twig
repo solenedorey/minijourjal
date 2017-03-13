@@ -5,12 +5,11 @@
 {% endblock %}
 
 {% block contenu %}
-
-    {% if article is empty %}
+    {% if articles is empty %}
         <p>Aucun article</p>
     {% else %}
         <ul>
-            {% for article is article %}
+            {% for article in articles %}
                 <li>
                     <a href="index.php?objet=article&amp;action=afficherDetail&amp;idArticle={{ article.id }}">
                         {{ article.titre }}

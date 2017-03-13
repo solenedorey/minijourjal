@@ -3,21 +3,42 @@ namespace Sd\Framework\AbstractClasses;
 
 use Sd\Framework\AppInterfaces\FormInterface;
 
+/**
+ * Class AbstractDocumentForm
+ * @package Sd\Framework\AbstractClasses
+ */
 abstract class AbstractDocumentForm implements FormInterface
 {
+    /**
+     * @var AbstractDocument
+     */
     protected $document;
+    /**
+     * @var
+     */
     protected $erreurs;
 
+    /**
+     * AbstractDocumentForm constructor.
+     * @param AbstractDocument $document
+     */
     public function __construct(AbstractDocument $document)
     {
         $this->document = $document;
     }
 
+    /**
+     * @return mixed
+     */
     public function getErreurs()
     {
         return $this->erreurs;
     }
 
+    /**
+     * @param $champ
+     * @return string
+     */
     public function getErreur($champ)
     {
         if (isset($this->erreurs[$champ])) {
@@ -27,6 +48,9 @@ abstract class AbstractDocumentForm implements FormInterface
         }
     }
 
+    /**
+     * @return bool
+     */
     public function estValide()
     {
         $manager = $this->strategieValidation();
@@ -34,5 +58,8 @@ abstract class AbstractDocumentForm implements FormInterface
         return count($this->erreurs) > 0 ? false : true;
     }
 
+    /**
+     * @return mixed
+     */
     abstract public function strategieValidation();
 }

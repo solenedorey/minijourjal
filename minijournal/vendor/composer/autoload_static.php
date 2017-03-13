@@ -7,9 +7,9 @@ namespace Composer\Autoload;
 class ComposerStaticInitd3ad01d20cf57d4b7cf5416f9a6c990d
 {
     public static $prefixesPsr0 = array (
-        'T' => 
+        'T' =>
         array (
-            'Twig_' => 
+            'Twig_' =>
             array (
                 0 => __DIR__ . '/..' . '/twig/twig/lib',
             ),

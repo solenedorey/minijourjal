@@ -386,8 +386,7 @@ class Twig_ExpressionParser
         $type = Twig_Template::ANY_CALL;
         if ($token->getValue() == '.') {
             $token = $stream->next();
-            if (
-                $token->getType() == Twig_Token::NAME_TYPE
+            if ($token->getType() == Twig_Token::NAME_TYPE
                 ||
                 $token->getType() == Twig_Token::NUMBER_TYPE
                 ||

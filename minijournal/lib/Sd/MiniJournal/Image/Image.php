@@ -63,7 +63,7 @@ class Image extends AbstractDocument
             $this->setAuteur($data['auteur']);
         }
         if (isset($data['fichier'])) {
-            $this->setAuteur($data['fichier']);
+            $this->setFichier($data['fichier']);
         }
     }
 }

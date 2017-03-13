@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8" />
-    <title>{% block titre %}{% endblock %} - Mini journal</title>
+    <title>Mini journal</title>
     <script src="vendor/ckeditor/ckeditor/ckeditor.js"></script>
 </head>
 
@@ -11,5 +11,6 @@
 <h1><a href="index.php">Mini Journal</a></h1>
 <h2>{% block titre %}{% endblock %}</h2>
 {% block contenu %}{% endblock %}
+<div><a href="index.php?objet=image&amp;action=afficherListe">Liste des images</a></div>
 </body>
 </html>

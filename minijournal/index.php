@@ -17,7 +17,7 @@ try {
 
     $router = new Router($requete);
     $controller = new FrontController($router, $requete, $reponse);
-    $controller->execute((new Twig())->getTwig());
+    $controller->execute();
 
     $titre = $reponse->getFragments('titre');
     $contenu = $reponse->getFragments('contenu');
@@ -34,4 +34,4 @@ try {
     header("HTTP/1.0 404 Not Found");
 }
 
-require 'vues/page.html';
+echo (new Twig())->getTwig()->render($reponse->getFile(), $reponse->getFragments());

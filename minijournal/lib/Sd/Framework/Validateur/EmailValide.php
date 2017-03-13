@@ -12,6 +12,6 @@ class EmailValide implements ValidateurInterface
 
     public function getMessage()
     {
-        return "L'adresse n'est pas valide.";
+        return "Le champ auteur n'est pas valide. Une adresse mail est requise.";
     }
 }

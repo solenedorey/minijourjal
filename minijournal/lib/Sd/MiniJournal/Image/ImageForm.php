@@ -5,7 +5,7 @@ use Sd\Framework\AbstractClasses\AbstractDocumentForm;
 use Sd\Framework\Validateur\ChaineNonVide;
 use Sd\Framework\Validateur\EmailValide;
 use Sd\Framework\Validateur\LongueurMaxi;
-use Sd\Framework\Validateur\ValidateurManager;
+use Sd\Framework\Managers\ValidateurManager;
 
 class ImageForm extends AbstractDocumentForm
 {

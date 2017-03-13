@@ -2,7 +2,7 @@
 namespace Sd\MiniJournal\Image;
 
 use Sd\Framework\AbstractClasses\AbstractDocumentControleur;
-use Sd\Framework\FileManager\FileManager;
+use Sd\Framework\Managers\FileManager;
 use Sd\Framework\HttpFoundation\Reponse;
 use Sd\Framework\HttpFoundation\Requete;
 
@@ -16,14 +16,6 @@ class ImageControleur extends AbstractDocumentControleur
      * @var Requete
      */
     private $requete;
-    /**
-     * @var Reponse
-     */
-    private $reponse;
-    /**
-     * @var
-     */
-    private $twig;
 
     /**
      * ImageControleur constructor.
@@ -31,12 +23,11 @@ class ImageControleur extends AbstractDocumentControleur
      * @param Reponse $reponse
      * @param $twig
      */
-    public function __construct(Requete $requete, Reponse $reponse, $twig)
+    public function __construct(Requete $requete, Reponse $reponse)
     {
         $this->imageBd = new ImageBd();
         $this->requete = $requete;
-        $this->reponse = $reponse;
-        $this->twig = $twig;
+        parent::__construct($reponse);
     }
 
     /**
@@ -44,11 +35,8 @@ class ImageControleur extends AbstractDocumentControleur
      */
     public function afficherListe()
     {
-        $this->reponse->ajouterFragment('titre', "Liste des images");
         $images = $this->imageBd->lireTous();
-        $afficheur = new ImageHtml();
-        $contenu = $afficheur->liste($images);
-        $this->reponse->ajouterFragment('contenu', $contenu);
+        $this->afficheur('image/listImages.twig', array('images' => $images));
     }
 
     /**
@@ -56,11 +44,9 @@ class ImageControleur extends AbstractDocumentControleur
      */
     public function afficherDetail()
     {
-        $this->reponse->ajouterFragment('titre', "Détail de l'image");
         $idImage = $this->requete->getItemGet('idImage');
         $image = $this->imageBd->lire($idImage);
-        $afficheur = new ImageHtml();
-        $this->reponse->ajouterFragment('contenu', $afficheur->image($image));
+        $this->afficheur('image/detailsImage.twig', array('image' => $image));
     }
 
     /**
@@ -69,16 +55,12 @@ class ImageControleur extends AbstractDocumentControleur
     public function editer()
     {
         if (!is_null($this->requete->getItemGet('idImage'))) {
-            $this->reponse->ajouterFragment('titre', "Modifier l'image");
             $idImage = $this->requete->getItemGet('idImage');
             $image = $this->imageBd->lire($idImage);
         } else {
-            $this->reponse->ajouterFragment('titre', "Editer l'image");
             $image = Image::creerDocumentVide();
         }
-        $form = new ImageForm($image);
-        $afficheur = new ImageHtml();
-        $this->reponse->ajouterFragment('contenu', $afficheur->formulaire($image, $form->getErreurs()));
+        $this->afficheur('image/formImage.twig', array('image' => $image));
     }
 
     /**
@@ -92,22 +74,24 @@ class ImageControleur extends AbstractDocumentControleur
         if (!is_null($this->requete->getItemPost('id'))) {
             $idImage = (int)$this->requete->getItemPost('id');
             $image = $this->imageBd->lire($idImage);
+            if ($formData['fichier'] === '') {
+                $formData['fichier'] = $image->getFichier();
+            }
             $image->modifierDepuisTableau($formData);
         } else {
             $image = Image::creerDepuisTableau($formData);
         }
         $form = new ImageForm($image);
         if ($form->estValide()) {
-            $fichier = new FileManager();
-            $fichier = $fichier->upload($formData['fichier']);
-            $image->setFichier($fichier);
-            $this->reponse->ajouterFragment('titre', "Enregistrement de l'image");
+            if ($this->requete->getItemFiles('fichier')['tmp_name'] !== '') {
+                $fichier = new FileManager();
+                $fichier = $fichier->upload($formData['fichier']);
+                $image->setFichier($fichier);
+            }
             $this->imageBd->persister($image) or die("Problème d'enregistrement en BD");
-            $this->reponse->ajouterFragment('contenu', (new ImageHtml())->image($image));
+            $this->afficheur('image/detailsImage.twig', array('image' => $image));
         } else {
-            $this->reponse->ajouterFragment('titre', "Compléter le formulaire");
-            $afficheur = new ImageHtml();
-            $this->reponse->ajouterFragment('contenu', $afficheur->formulaire($image, $form->getErreurs()));
+            $this->afficheur('image/formImage.twig', array('image' => $image, 'erreurs' => $form->getErreurs()));
         }
     }
 

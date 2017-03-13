@@ -11,18 +11,18 @@
         <h2>{{ article.auteur }}</h2>
         <p>{{ article.chapo }}</p>
     </header>
-    <p>{{ article.contenu }}</p>
+    <p>{{ article.contenu|raw }}</p>
     <footer>
         <table>
             <tr>
                 <th>Date de création</th>
-                {% if article.statut = 1 %}
+                {% if article.statut == 1 %}
                 <th>Date de publication</th>
                 {% endif %}
             </tr>
             <tr>
                 <td>{{ article.dateCreation }}</td>
-                {% if article.statut = 1 %}
+                {% if article.statut == 1 %}
                 <td>{{ article.datePublication }}</td>
                 {% endif %}
             </tr>
