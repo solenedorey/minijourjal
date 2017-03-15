@@ -48,6 +48,13 @@ abstract class AbstractDocumentForm implements FormInterface
         }
     }
 
+    public static function nettoyer($form)
+    {
+        $manager = static::strategieNettoyage();
+        $form = $manager->nettoyer($form);
+        return $form;
+    }
+
     /**
      * @return bool
      */

@@ -68,14 +68,16 @@ class ImageControleur extends AbstractDocumentControleur
      */
     public function enregistrer()
     {
+        $oldName = '';
         $formData = $this->requete->getPost();
         $formData['fichier'] = $this->requete->getItemFiles('fichier')['tmp_name'];
         $formData = ImageForm::nettoyer($formData);
         if (!is_null($this->requete->getItemPost('id'))) {
             $idImage = (int)$this->requete->getItemPost('id');
             $image = $this->imageBd->lire($idImage);
+            $oldName = $image->getFichier();
             if ($formData['fichier'] === '') {
-                $formData['fichier'] = $image->getFichier();
+                $formData['fichier'] = $oldName;
             }
             $image->modifierDepuisTableau($formData);
         } else {
@@ -84,6 +86,10 @@ class ImageControleur extends AbstractDocumentControleur
         $form = new ImageForm($image);
         if ($form->estValide()) {
             if ($this->requete->getItemFiles('fichier')['tmp_name'] !== '') {
+                $path = IMAGE_BASEFILE . $oldName;
+                if (is_file($path)){
+                    unlink($path);
+                }
                 $fichier = new FileManager();
                 $fichier = $fichier->upload($formData['fichier']);
                 $image->setFichier($fichier);
@@ -102,7 +108,7 @@ class ImageControleur extends AbstractDocumentControleur
     {
         $idImage = $_GET['idImage'];
         $image = $this->imageBd->lire($idImage);
-        $path = $image->getFichier();
+        $path = IMAGE_BASEFILE . $image->getFichier();
         unlink($path);
         $this->imageBd->supprimer($idImage);
         header('Location: index.php?objet=image&amp;action=afficherListe');

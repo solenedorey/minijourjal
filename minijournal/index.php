@@ -19,19 +19,16 @@ try {
     $controller = new FrontController($router, $requete, $reponse);
     $controller->execute();
 
-    $titre = $reponse->getFragments('titre');
-    $contenu = $reponse->getFragments('contenu');
-
 } catch (Exception $e) {
-    $titre = "Erreur 404";
-    // utiliser la constante MODE_DEV déclarée en config pour décider du message à afficher
+    $reponse->setFile('errorPage.twig');
     if (MODE_DEV) {
-        $contenu = $e->getMessage();
-        $contenu .= "<div>" . nl2br($e->getTraceAsString()) . "</div>";
+        $erreur = $e->getMessage();
+        $erreur .= nl2br($e->getTraceAsString());
+        $reponse->setFragments(array('erreur' => $erreur));
     } else {
-        $contenu .= "<p>Une erreur d'exécution s'est produite.</p>";
+        $erreur = "<p>Une erreur d'exécution s'est produite.</p>";
+        $reponse->setFragments(array('erreur' => $erreur));
     }
     header("HTTP/1.0 404 Not Found");
 }
-
 echo (new Twig())->getTwig()->render($reponse->getFile(), $reponse->getFragments());

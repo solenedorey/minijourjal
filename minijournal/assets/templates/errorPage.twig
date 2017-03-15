@@ -1,0 +1,11 @@
+{%  extends 'page.twig' %}
+
+{% block titre %}
+    Erreur
+{% endblock %}
+
+{% block contenu %}
+    <div class="erreur">
+        {{ erreur|raw }}
+    </div>
+{% endblock %}

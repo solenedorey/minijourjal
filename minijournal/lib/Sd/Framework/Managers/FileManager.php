@@ -13,7 +13,7 @@ class FileManager
             mkdir($newPath, 0777, true);
         }
         move_uploaded_file($tmp_name, $fullPath);
-        return $fullPath;
+        return $newName;
     }
 
     public function getExtension($file)

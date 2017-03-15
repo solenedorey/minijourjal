@@ -11,6 +11,6 @@
             <h3>{{ image.auteur }}</h3>
             <p>Date de création : {{ image.dateCreation }}</p>
         </figcaption>
-        <img src="{{ image.fichier }}" alt="{{ image.titre }}">
+        <img src="{{ constant('IMAGE_BASEFILE')~image.fichier }}" alt="{{ image.titre }}">
     </figure>
 {% endblock %}

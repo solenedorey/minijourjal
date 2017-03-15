@@ -1,5 +1,5 @@
 <?php
-namespace Sd\Framework\Validateur;
+namespace Sd\Framework\Validateurs;
 
 use Sd\Framework\AppInterfaces\ValidateurInterface;
 
@@ -7,10 +7,6 @@ class LongueurMaxi implements ValidateurInterface
 {
     private $limit;
 
-    /**
-     * LongueurMini constructor.
-     * @param $limit
-     */
     public function __construct($limit)
     {
         $this->limit = $limit;

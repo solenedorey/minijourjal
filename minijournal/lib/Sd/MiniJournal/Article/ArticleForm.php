@@ -3,25 +3,31 @@
 namespace Sd\MiniJournal\Article;
 
 use Sd\Framework\AbstractClasses\AbstractDocumentForm;
-use Sd\Framework\Validateur\ChaineNonVide;
-use Sd\Framework\Validateur\EmailValide;
-use Sd\Framework\Validateur\LongueurMini;
-use Sd\Framework\Validateur\LongueurMaxi;
-use Sd\Framework\Validateur\ValidateurManager;
+use Sd\Framework\Managers\NettoyeurManager;
+use Sd\Framework\Managers\ValidateurManager;
+//Nettoyeurs
+use Sd\Framework\Nettoyeur\StripTags;
+use Sd\Framework\Nettoyeur\Trim;
+//Validateurs
+use Sd\Framework\Validateurs\ChaineNonVide;
+use Sd\Framework\Validateurs\EmailValide;
+use Sd\Framework\Validateurs\LongueurMini;
+use Sd\Framework\Validateurs\LongueurMaxi;
 
 class ArticleForm extends AbstractDocumentForm
 {
-    public static function nettoyer($form)
+    public static function strategieNettoyage()
     {
-        foreach ($form as $key => &$value) {
-            $value = trim($value);
-            if ($key !== 'contenu') {
-                $value = strip_tags($value);
-            } else {
-                $value = strip_tags($value, '<br>');
-            }
-        }
-        return $form;
+        $nettoyeurManager = new NettoyeurManager();
+        $nettoyeurManager->ajouter('titre', new Trim())
+            ->ajouter('titre', new StripTags())
+            ->ajouter('auteur', new Trim())
+            ->ajouter('auteur', new StripTags())
+            ->ajouter('chapo', new Trim())
+            ->ajouter('chapo', new StripTags())
+            ->ajouter('contenu', new Trim())
+            ->ajouter('contenu', new StripTags('<p><em><strong><u><ul><li>'));
+        return $nettoyeurManager;
     }
 
     public function strategieValidation()

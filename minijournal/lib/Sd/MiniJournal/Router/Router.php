@@ -38,7 +38,7 @@ class Router
                 $this->controllerClassName = 'Sd\MiniJournal\Article\ArticleControleur';
                 try {
                     class_exists($this->controllerClassName);
-                } catch (Exception $e) {
+                } catch (\Exception $e) {
                     throw new \Exception("Classe {$this->controllerClassName} non existante");
                 }
                 $this->controllerAction = $action;
@@ -47,7 +47,7 @@ class Router
                 $this->controllerClassName = 'Sd\MiniJournal\Image\ImageControleur';
                 try {
                     class_exists($this->controllerClassName);
-                } catch (Exception $e) {
+                } catch (\Exception $e) {
                     throw new \Exception("Classe {$this->controllerClassName} non existante");
                 }
                 $this->controllerAction = $action;

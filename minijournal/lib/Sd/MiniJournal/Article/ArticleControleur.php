@@ -56,7 +56,6 @@ class ArticleControleur extends AbstractDocumentControleur
         if ($form->estValide()) {
             $this->articleBd->persister($article) or die("Problème d'enregistrement en BD");
             $this->afficheur('article/detailsArticle.twig', array('article' => $article));
-
         } else {
             $this->afficheur('article/formArticle.twig', array('article' => $article, 'erreurs' => $form->getErreurs()));
         }
