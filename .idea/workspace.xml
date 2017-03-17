@@ -1,62 +1,528 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="20ac964d-078d-42ba-92a9-7f5ecc14f268" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/minijournal/assets/media/images/checked.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/minijournal/assets/media/images/news.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/minijournal/assets/.idea/assets.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/minijournal/assets/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/minijournal/assets/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/minijournal/assets/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/minijournal/assets/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/minijournal/assets/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/minijournal/assets/templates/about.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/minijournal/assets/templates/index.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Page/PageControleur.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/minijournal/assets/media/images/img_58c9786f7c4f9.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/minijournal/assets/media/images/img_58c97aed497a3.jpeg" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/minijournal/assets/templates/formErrors.twig" afterPath="$PROJECT_DIR$/minijournal/assets/templates/frag/formErrors.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/minijournal/config/autoload.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Loader/autoload.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AbstractClasses/AbstractDocumentControleur.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AbstractClasses/AbstractControleur.php" />
+    <list default="true" id="20ac964d-078d-42ba-92a9-7f5ecc14f268" name="Default" comment="Twig commencé&#10;">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/AbstractControleur_8php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/AbstractControleur_8php_source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/AbstractDocumentBd_8php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/AbstractDocumentBd_8php_source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/AbstractDocumentForm_8php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/AbstractDocumentForm_8php_source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/AbstractDocument_8php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/AbstractDocument_8php_source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/ArticleBd_8php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/ArticleBd_8php_source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/ArticleControleur_8php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/ArticleControleur_8php_source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/ArticleForm_8php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/ArticleForm_8php_source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/Article_8php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/Article_8php_source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/ChaineNonVide_8php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/ChaineNonVide_8php_source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/ConnectionSingleton_8php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/ConnectionSingleton_8php_source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/DocumentInterface_8php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/DocumentInterface_8php_source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/EmailValide_8php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/EmailValide_8php_source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/FileManager_8php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/FileManager_8php_source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/FormInterface_8php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/FormInterface_8php_source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/FrontController_8php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/FrontController_8php_source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/ImageBd_8php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/ImageBd_8php_source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/ImageControleur_8php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/ImageControleur_8php_source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/ImageForm_8php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/ImageForm_8php_source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/Image_8php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/Image_8php_source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/LongueurMaxi_8php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/LongueurMaxi_8php_source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/LongueurMini_8php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/LongueurMini_8php_source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/NettoyeurInterface_8php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/NettoyeurInterface_8php_source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/NettoyeurManager_8php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/NettoyeurManager_8php_source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/PageControleur_8php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/PageControleur_8php_source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/PersistInterface_8php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/PersistInterface_8php_source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/README_8md.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/README_8md_source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/Reponse_8php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/Reponse_8php_source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/Requete_8php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/Requete_8php_source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/Router_8php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/Router_8php_source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/StripTags_8php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/StripTags_8php_source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/TailleFichierValide_8php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/TailleFichierValide_8php_source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/Trim_8php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/Trim_8php_source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/Twig_8php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/Twig_8php_source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/TypeMimeValide_8php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/TypeMimeValide_8php_source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/ValidateurInterface_8php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/ValidateurInterface_8php_source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/ValidateurManager_8php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/ValidateurManager_8php_source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/annotated.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/arrowdown.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/arrowright.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/autoload_8php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/autoload_8php_source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/bc_s.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/bdwn.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classJml_1_1Tools_1_1Database_1_1ConnectionSingleton.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1AbstractClasses_1_1AbstractControleur.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1AbstractClasses_1_1AbstractControleur__inherit__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1AbstractClasses_1_1AbstractControleur__inherit__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1AbstractClasses_1_1AbstractControleur__inherit__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1AbstractClasses_1_1AbstractDocument.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1AbstractClasses_1_1AbstractDocumentBd.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1AbstractClasses_1_1AbstractDocumentBd__coll__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1AbstractClasses_1_1AbstractDocumentBd__coll__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1AbstractClasses_1_1AbstractDocumentBd__coll__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1AbstractClasses_1_1AbstractDocumentBd__inherit__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1AbstractClasses_1_1AbstractDocumentBd__inherit__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1AbstractClasses_1_1AbstractDocumentBd__inherit__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1AbstractClasses_1_1AbstractDocumentForm.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1AbstractClasses_1_1AbstractDocumentForm__coll__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1AbstractClasses_1_1AbstractDocumentForm__coll__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1AbstractClasses_1_1AbstractDocumentForm__coll__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1AbstractClasses_1_1AbstractDocumentForm__inherit__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1AbstractClasses_1_1AbstractDocumentForm__inherit__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1AbstractClasses_1_1AbstractDocumentForm__inherit__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1AbstractClasses_1_1AbstractDocument__coll__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1AbstractClasses_1_1AbstractDocument__coll__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1AbstractClasses_1_1AbstractDocument__coll__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1AbstractClasses_1_1AbstractDocument__inherit__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1AbstractClasses_1_1AbstractDocument__inherit__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1AbstractClasses_1_1AbstractDocument__inherit__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Controller_1_1FrontController.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1HttpFoundation_1_1Reponse.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1HttpFoundation_1_1Requete.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Managers_1_1FileManager.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Managers_1_1NettoyeurManager.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Managers_1_1ValidateurManager.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Nettoyeur_1_1StripTags.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Nettoyeur_1_1StripTags__coll__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Nettoyeur_1_1StripTags__coll__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Nettoyeur_1_1StripTags__coll__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Nettoyeur_1_1StripTags__inherit__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Nettoyeur_1_1StripTags__inherit__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Nettoyeur_1_1StripTags__inherit__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Nettoyeur_1_1Trim.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Nettoyeur_1_1Trim__coll__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Nettoyeur_1_1Trim__coll__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Nettoyeur_1_1Trim__coll__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Nettoyeur_1_1Trim__inherit__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Nettoyeur_1_1Trim__inherit__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Nettoyeur_1_1Trim__inherit__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Twig_1_1Twig.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Validateurs_1_1ChaineNonVide.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Validateurs_1_1ChaineNonVide__coll__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Validateurs_1_1ChaineNonVide__coll__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Validateurs_1_1ChaineNonVide__coll__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Validateurs_1_1ChaineNonVide__inherit__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Validateurs_1_1ChaineNonVide__inherit__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Validateurs_1_1ChaineNonVide__inherit__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Validateurs_1_1EmailValide.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Validateurs_1_1EmailValide__coll__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Validateurs_1_1EmailValide__coll__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Validateurs_1_1EmailValide__coll__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Validateurs_1_1EmailValide__inherit__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Validateurs_1_1EmailValide__inherit__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Validateurs_1_1EmailValide__inherit__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Validateurs_1_1LongueurMaxi.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Validateurs_1_1LongueurMaxi__coll__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Validateurs_1_1LongueurMaxi__coll__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Validateurs_1_1LongueurMaxi__coll__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Validateurs_1_1LongueurMaxi__inherit__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Validateurs_1_1LongueurMaxi__inherit__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Validateurs_1_1LongueurMaxi__inherit__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Validateurs_1_1LongueurMini.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Validateurs_1_1LongueurMini__coll__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Validateurs_1_1LongueurMini__coll__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Validateurs_1_1LongueurMini__coll__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Validateurs_1_1LongueurMini__inherit__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Validateurs_1_1LongueurMini__inherit__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Validateurs_1_1LongueurMini__inherit__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Validateurs_1_1TailleFichierValide.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Validateurs_1_1TailleFichierValide__coll__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Validateurs_1_1TailleFichierValide__coll__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Validateurs_1_1TailleFichierValide__coll__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Validateurs_1_1TailleFichierValide__inherit__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Validateurs_1_1TailleFichierValide__inherit__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Validateurs_1_1TailleFichierValide__inherit__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Validateurs_1_1TypeMimeValide.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Validateurs_1_1TypeMimeValide__coll__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Validateurs_1_1TypeMimeValide__coll__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Validateurs_1_1TypeMimeValide__coll__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Validateurs_1_1TypeMimeValide__inherit__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Validateurs_1_1TypeMimeValide__inherit__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1Framework_1_1Validateurs_1_1TypeMimeValide__inherit__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Article_1_1Article.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Article_1_1ArticleBd.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Article_1_1ArticleBd__coll__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Article_1_1ArticleBd__coll__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Article_1_1ArticleBd__coll__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Article_1_1ArticleBd__inherit__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Article_1_1ArticleBd__inherit__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Article_1_1ArticleBd__inherit__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Article_1_1ArticleControleur.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Article_1_1ArticleControleur__coll__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Article_1_1ArticleControleur__coll__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Article_1_1ArticleControleur__coll__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Article_1_1ArticleControleur__inherit__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Article_1_1ArticleControleur__inherit__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Article_1_1ArticleControleur__inherit__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Article_1_1ArticleForm.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Article_1_1ArticleForm__coll__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Article_1_1ArticleForm__coll__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Article_1_1ArticleForm__coll__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Article_1_1ArticleForm__inherit__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Article_1_1ArticleForm__inherit__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Article_1_1ArticleForm__inherit__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Article_1_1Article__coll__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Article_1_1Article__coll__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Article_1_1Article__coll__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Article_1_1Article__inherit__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Article_1_1Article__inherit__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Article_1_1Article__inherit__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Image_1_1Image.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Image_1_1ImageBd.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Image_1_1ImageBd__coll__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Image_1_1ImageBd__coll__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Image_1_1ImageBd__coll__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Image_1_1ImageBd__inherit__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Image_1_1ImageBd__inherit__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Image_1_1ImageBd__inherit__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Image_1_1ImageControleur.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Image_1_1ImageControleur__coll__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Image_1_1ImageControleur__coll__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Image_1_1ImageControleur__coll__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Image_1_1ImageControleur__inherit__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Image_1_1ImageControleur__inherit__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Image_1_1ImageControleur__inherit__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Image_1_1ImageForm.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Image_1_1ImageForm__coll__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Image_1_1ImageForm__coll__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Image_1_1ImageForm__coll__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Image_1_1ImageForm__inherit__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Image_1_1ImageForm__inherit__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Image_1_1ImageForm__inherit__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Image_1_1Image__coll__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Image_1_1Image__coll__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Image_1_1Image__coll__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Image_1_1Image__inherit__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Image_1_1Image__inherit__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Image_1_1Image__inherit__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Page_1_1PageControleur.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Page_1_1PageControleur__coll__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Page_1_1PageControleur__coll__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Page_1_1PageControleur__coll__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Page_1_1PageControleur__inherit__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Page_1_1PageControleur__inherit__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Page_1_1PageControleur__inherit__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classSd_1_1MiniJournal_1_1Router_1_1Router.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/classes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/closed.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/dir_060e805d6bcc9a1d4376b1ac19430608.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/dir_08d581eebdd7cddf4b8abe56fd0bc512.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/dir_1841cec92f94e03d5f38a159f4deed2b.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/dir_2010105488e5eddd6e6c370c47e7b766.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/dir_47222bab97e854bcbffb5f26aa22307a.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/dir_5c5ec39f1592f525aa3eb4709d26d21c.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/dir_63b02e52d8b150b3ec6b90bb0fbadb7a.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/dir_78ba028a1774fe74a085de384f4f9c86.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/dir_7bc6a6042ae5b9f0f55328f36587c0f7.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/dir_80f668e0955c778ca4814f4b5c960968.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/dir_999f47cfffd90e3152b451cce92bf716.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/dir_a2db3b30f032ecfef67bd4d3abf7f9e5.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/dir_ac4d8069e49e6cc267642b3837c8bf58.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/dir_aebaddfec3dc1e9359779a25449d953f.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/dir_aeffb7e4e8d98bdd7fe1ce74ff048994.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/dir_b997624973054c31a359862555760509.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/dir_ce14c365f444325bcc78a151ab90ce00.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/dir_d4d3d5eae33535edb8d3641939b270af.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/dir_ed6d6ca7fd0b908cfa29419608cfb8ce.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/dir_f46635ea4d2c143097d21e4f2aadf078.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/dir_faa437759b6f051393d5db60781a027c.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/doc.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/doxygen.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/doxygen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/dynsections.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/files.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/folderclosed.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/folderopen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/functions.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/functions_func.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/functions_vars.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/globals.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/globals_func.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/globals_vars.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/graph_legend.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/graph_legend.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/graph_legend.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/hierarchy.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/index_8php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/index_8php_source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_0.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_0.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_1.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_1.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_10.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_10.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_10.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_11.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_11.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_11.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_12.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_12.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_12.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_13.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_13.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_13.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_14.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_14.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_14.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_2.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_2.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_3.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_3.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_4.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_4.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_5.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_5.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_6.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_6.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_7.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_7.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_8.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_8.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_9.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_9.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherit_graph_9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/inherits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/interfaceSd_1_1Framework_1_1AppInterfaces_1_1DocumentInterface.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/interfaceSd_1_1Framework_1_1AppInterfaces_1_1DocumentInterface__inherit__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/interfaceSd_1_1Framework_1_1AppInterfaces_1_1DocumentInterface__inherit__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/interfaceSd_1_1Framework_1_1AppInterfaces_1_1DocumentInterface__inherit__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/interfaceSd_1_1Framework_1_1AppInterfaces_1_1FormInterface.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/interfaceSd_1_1Framework_1_1AppInterfaces_1_1FormInterface__inherit__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/interfaceSd_1_1Framework_1_1AppInterfaces_1_1FormInterface__inherit__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/interfaceSd_1_1Framework_1_1AppInterfaces_1_1FormInterface__inherit__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/interfaceSd_1_1Framework_1_1AppInterfaces_1_1NettoyeurInterface.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/interfaceSd_1_1Framework_1_1AppInterfaces_1_1NettoyeurInterface__inherit__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/interfaceSd_1_1Framework_1_1AppInterfaces_1_1NettoyeurInterface__inherit__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/interfaceSd_1_1Framework_1_1AppInterfaces_1_1NettoyeurInterface__inherit__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/interfaceSd_1_1Framework_1_1AppInterfaces_1_1PersistInterface.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/interfaceSd_1_1Framework_1_1AppInterfaces_1_1PersistInterface__inherit__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/interfaceSd_1_1Framework_1_1AppInterfaces_1_1PersistInterface__inherit__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/interfaceSd_1_1Framework_1_1AppInterfaces_1_1PersistInterface__inherit__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/interfaceSd_1_1Framework_1_1AppInterfaces_1_1ValidateurInterface.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/interfaceSd_1_1Framework_1_1AppInterfaces_1_1ValidateurInterface__inherit__graph.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/interfaceSd_1_1Framework_1_1AppInterfaces_1_1ValidateurInterface__inherit__graph.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/interfaceSd_1_1Framework_1_1AppInterfaces_1_1ValidateurInterface__inherit__graph.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/md_README.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/namespaceJml.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/namespaceJml_1_1Tools.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/namespaceJml_1_1Tools_1_1Database.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/namespaceSd.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/namespaceSd_1_1Framework.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/namespaceSd_1_1Framework_1_1AbstractClasses.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/namespaceSd_1_1Framework_1_1AppInterfaces.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/namespaceSd_1_1Framework_1_1Controller.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/namespaceSd_1_1Framework_1_1HttpFoundation.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/namespaceSd_1_1Framework_1_1Managers.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/namespaceSd_1_1Framework_1_1Nettoyeur.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/namespaceSd_1_1Framework_1_1Twig.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/namespaceSd_1_1Framework_1_1Validateurs.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/namespaceSd_1_1MiniJournal.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/namespaceSd_1_1MiniJournal_1_1Article.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/namespaceSd_1_1MiniJournal_1_1Image.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/namespaceSd_1_1MiniJournal_1_1Page.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/namespaceSd_1_1MiniJournal_1_1Router.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/namespaces.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/nav_f.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/nav_g.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/nav_h.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/open.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/pages.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/all_0.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/all_0.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/all_1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/all_1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/all_10.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/all_10.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/all_11.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/all_11.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/all_12.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/all_12.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/all_13.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/all_13.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/all_2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/all_2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/all_3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/all_3.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/all_4.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/all_4.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/all_5.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/all_5.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/all_6.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/all_6.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/all_7.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/all_7.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/all_8.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/all_8.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/all_9.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/all_9.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/all_a.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/all_a.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/all_b.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/all_b.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/all_c.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/all_c.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/all_d.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/all_d.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/all_e.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/all_e.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/all_f.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/all_f.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/classes_0.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/classes_0.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/classes_1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/classes_1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/classes_2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/classes_2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/classes_3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/classes_3.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/classes_4.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/classes_4.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/classes_5.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/classes_5.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/classes_6.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/classes_6.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/classes_7.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/classes_7.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/classes_8.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/classes_8.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/classes_9.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/classes_9.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/classes_a.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/classes_a.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/classes_b.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/classes_b.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/classes_c.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/classes_c.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/close.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/files_0.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/files_0.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/files_1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/files_1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/files_2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/files_2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/files_3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/files_3.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/files_4.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/files_4.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/files_5.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/files_5.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/files_6.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/files_6.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/files_7.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/files_7.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/files_8.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/files_8.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/files_9.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/files_9.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/files_a.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/files_a.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/files_b.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/files_b.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/files_c.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/files_c.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/functions_0.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/functions_0.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/functions_1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/functions_1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/functions_2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/functions_2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/functions_3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/functions_3.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/functions_4.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/functions_4.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/functions_5.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/functions_5.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/functions_6.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/functions_6.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/functions_7.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/functions_7.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/functions_8.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/functions_8.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/functions_9.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/functions_9.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/functions_a.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/functions_a.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/functions_b.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/functions_b.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/functions_c.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/functions_c.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/functions_d.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/functions_d.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/mag_sel.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/namespaces_0.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/namespaces_0.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/namespaces_1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/namespaces_1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/nomatches.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/pages_0.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/pages_0.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/pages_1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/pages_1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/search.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/search.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/search_l.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/search_m.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/search_r.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/searchdata.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/variables_0.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/variables_0.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/variables_1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/variables_1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/variables_2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/search/variables_2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/splitbar.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/sync_off.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/sync_on.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/tab_a.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/tab_b.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/tab_h.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/tab_s.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/tabs.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/todo.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/vendor/ckeditor/ckeditor" afterPath="$PROJECT_DIR$/minijournal/vendor/ckeditor/ckeditor" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/assets/templates/article/detailsArticle.twig" afterPath="$PROJECT_DIR$/minijournal/assets/templates/article/detailsArticle.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/assets/templates/image/detailsImage.twig" afterPath="$PROJECT_DIR$/minijournal/assets/templates/image/detailsImage.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/assets/templates/page.twig" afterPath="$PROJECT_DIR$/minijournal/assets/templates/page.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/config/config.php" afterPath="$PROJECT_DIR$/minijournal/config/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/index.php" afterPath="$PROJECT_DIR$/minijournal/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AbstractClasses/AbstractDocument.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AbstractClasses/AbstractDocument.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AbstractClasses/AbstractDocumentBd.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AbstractClasses/AbstractDocumentBd.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AbstractClasses/AbstractDocumentForm.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AbstractClasses/AbstractDocumentForm.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AppInterfaces/DocumentInterface.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AppInterfaces/DocumentInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AppInterfaces/FormInterface.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AppInterfaces/FormInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AppInterfaces/NettoyeurInterface.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AppInterfaces/NettoyeurInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AppInterfaces/PersistInterface.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AppInterfaces/PersistInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AppInterfaces/ValidateurInterface.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/AppInterfaces/ValidateurInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Controller/FrontController.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Controller/FrontController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/HttpFoundation/Reponse.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/HttpFoundation/Reponse.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/HttpFoundation/Requete.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/HttpFoundation/Requete.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Managers/FileManager.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Managers/FileManager.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Managers/NettoyeurManager.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Managers/NettoyeurManager.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Managers/ValidateurManager.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Managers/ValidateurManager.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Nettoyeur/StripTags.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Nettoyeur/StripTags.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Nettoyeur/Trim.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Nettoyeur/Trim.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Twig/Twig.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Twig/Twig.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Validateurs/ChaineNonVide.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Validateurs/ChaineNonVide.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Validateurs/EmailValide.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Validateurs/EmailValide.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Validateurs/LongueurMaxi.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Validateurs/LongueurMaxi.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Validateurs/LongueurMini.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Validateurs/LongueurMini.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Validateurs/TailleFichierValide.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Validateurs/TailleFichierValide.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Validateurs/TypeMimeValide.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Validateurs/TypeMimeValide.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/Article.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/Article.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/ArticleBd.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/ArticleBd.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/ArticleControleur.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/ArticleControleur.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/ArticleForm.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/ArticleForm.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/Image.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/Image.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/ImageBd.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/ImageBd.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/ImageControleur.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/ImageControleur.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/ImageForm.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/ImageForm.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Router/Router.php" afterPath="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Router/Router.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -92,11 +558,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ArticleControleur.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ArticleControleur.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/ArticleControleur.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="529">
-              <caret line="100" column="9" lean-forward="true" selection-start-line="100" selection-start-column="9" selection-end-line="100" selection-end-column="9" />
+              <caret line="100" column="9" lean-forward="false" selection-start-line="100" selection-start-column="9" selection-end-line="100" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -106,7 +582,7 @@
         <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/ArticleBd.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="605">
-              <caret line="90" column="60" lean-forward="true" selection-start-line="90" selection-start-column="60" selection-end-line="90" selection-end-column="60" />
+              <caret line="90" column="60" lean-forward="false" selection-start-line="90" selection-start-column="60" selection-end-line="90" selection-end-column="60" />
               <folding>
                 <marker date="1489688154000" expanded="true" signature="819:905" ph="SELECT * FRO... ${self::TABLE_NAME}" />
                 <marker date="1489688154000" expanded="true" signature="1568:1591" ph="SELECT * FRO... ${self::TABLE_NAME}" />
@@ -147,7 +623,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/minijournal/assets/templates/image/formImage.twig" />
         <option value="$PROJECT_DIR$/minijournal/lib/Sd/Framework/Validateur/ValidateurManager.php" />
         <option value="$PROJECT_DIR$/minijournal/assets/templates/errors/error_mode_dev" />
         <option value="$PROJECT_DIR$/minijournal/assets/templates/errorPage.twig" />
@@ -198,6 +673,7 @@
         <option value="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Router/Router.php" />
         <option value="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Image/ImageControleur.php" />
         <option value="$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/ArticleControleur.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -241,332 +717,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="TP9" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TP9" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TP9" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="minijournal" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TP9" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TP9" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="minijournal" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Sd" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MiniJournal" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Router" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TP9" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TP9" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="minijournal" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Sd" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MiniJournal" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Page" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TP9" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TP9" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="minijournal" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Sd" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MiniJournal" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Image" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TP9" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TP9" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="minijournal" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Sd" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MiniJournal" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Article" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TP9" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TP9" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="minijournal" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Sd" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Framework" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TP9" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TP9" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="minijournal" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Sd" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Framework" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Loader" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TP9" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TP9" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="minijournal" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Sd" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Framework" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controller" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TP9" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TP9" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="minijournal" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Sd" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Framework" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AbstractClasses" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TP9" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TP9" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="minijournal" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TP9" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TP9" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="minijournal" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TP9" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TP9" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="minijournal" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TP9" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TP9" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="minijournal" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -691,7 +841,7 @@
       <workItem from="1489592670911" duration="10459000" />
       <workItem from="1489668355848" duration="1601000" />
       <workItem from="1489679622060" duration="10481000" />
-      <workItem from="1489742903020" duration="1878000" />
+      <workItem from="1489742903020" duration="3147000" />
     </task>
     <task id="LOCAL-00001" summary="Twig commencé&#10;">
       <created>1488478592480</created>
@@ -704,7 +854,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126619000" />
+    <option name="totallyTimeSpent" value="127888000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -726,7 +876,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32912722" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3286638" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3114224" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -753,13 +903,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/minijournal/assets/templates/article/listArticles.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="85" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/minijournal/vues/page.html" />
     <entry file="file://$PROJECT_DIR$/minijournal/assets/templates/errors/error_mode_prod" />
     <entry file="file://$PROJECT_DIR$/minijournal/assets/templates/article/detailsArticle.twig">
@@ -1118,7 +1261,7 @@
     <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/ArticleBd.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="605">
-          <caret line="90" column="60" lean-forward="true" selection-start-line="90" selection-start-column="60" selection-end-line="90" selection-end-column="60" />
+          <caret line="90" column="60" lean-forward="false" selection-start-line="90" selection-start-column="60" selection-end-line="90" selection-end-column="60" />
           <folding>
             <marker date="1489688154000" expanded="true" signature="819:905" ph="SELECT * FRO... ${self::TABLE_NAME}" />
             <marker date="1489688154000" expanded="true" signature="1568:1591" ph="SELECT * FRO... ${self::TABLE_NAME}" />
@@ -1139,7 +1282,15 @@
     <entry file="file://$PROJECT_DIR$/minijournal/lib/Sd/MiniJournal/Article/ArticleControleur.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="529">
-          <caret line="100" column="9" lean-forward="true" selection-start-line="100" selection-start-column="9" selection-end-line="100" selection-end-column="9" />
+          <caret line="100" column="9" lean-forward="false" selection-start-line="100" selection-start-column="9" selection-end-line="100" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
           <folding />
         </state>
       </provider>
