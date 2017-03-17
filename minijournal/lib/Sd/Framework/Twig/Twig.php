@@ -5,12 +5,19 @@ use Twig_Environment;
 use Twig_Loader_Filesystem;
 use Twig_SimpleFunction;
 
+/**
+ * Classe Twig permettant de gérer les templates.
+ * @package Sd\Framework\Twig
+ */
 class Twig
 {
+    /**
+     * @var Twig_Environment
+     */
     private $twig;
 
     /**
-     * Twig constructor.
+     * Constructeur de la classe Twig.
      */
     public function __construct()
     {
@@ -20,7 +27,7 @@ class Twig
         ));
 
         $displayErrors = new Twig_SimpleFunction('display_errors', function ($errors) {
-            echo $this->twig->render('formErrors.twig', array(
+            echo $this->twig->render('frag/formErrors.twig', array(
                 'errors' => $errors
             ));
         });

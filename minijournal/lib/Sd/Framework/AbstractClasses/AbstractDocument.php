@@ -4,26 +4,31 @@ namespace Sd\Framework\AbstractClasses;
 use Sd\Framework\AppInterfaces\DocumentInterface;
 
 /**
- * Class AbstractDocument
+ * Classe AbstractDocument qui factorise les données et méthodes communes à tout type de document.
  * @package Sd\Framework\AbstractClasses
  */
 abstract class AbstractDocument implements DocumentInterface
 {
     /**
-     * @var
+     * Identifiant du document.
+     * @var int $id
      */
     protected $id;
+
     /**
-     * @var
+     * Titre du document.
+     * @var string
      */
     protected $titre;
+
     /**
-     * @var
+     * Date de création du document.
+     * @var string
      */
     protected $dateCreation;
 
     /**
-     * AbstractDocument constructor.
+     * Constructeur de la classe AbstractDocument.
      * @param $id
      * @param $titre
      * @param $dateCreation

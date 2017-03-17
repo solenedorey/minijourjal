@@ -1,5 +1,4 @@
 <?php
-
 namespace Sd\MiniJournal\Article;
 
 use Sd\Framework\AbstractClasses\AbstractDocumentForm;
@@ -14,8 +13,16 @@ use Sd\Framework\Validateurs\EmailValide;
 use Sd\Framework\Validateurs\LongueurMini;
 use Sd\Framework\Validateurs\LongueurMaxi;
 
+/**
+ * Classe ArticleForm
+ * @package Sd\MiniJournal\Article
+ */
 class ArticleForm extends AbstractDocumentForm
 {
+    /**
+     * Permet de nettoyer les données postées via un formulaire.
+     * @return NettoyeurManager
+     */
     public static function strategieNettoyage()
     {
         $nettoyeurManager = new NettoyeurManager();
@@ -30,6 +37,10 @@ class ArticleForm extends AbstractDocumentForm
         return $nettoyeurManager;
     }
 
+    /**
+     * Permet de valider les données postées via un formulaire.
+     * @return ValidateurManager
+     */
     public function strategieValidation()
     {
         $validateurManager = new ValidateurManager();

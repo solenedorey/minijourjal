@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Mini Journal:  Fichier source de minijournal/lib/Sd/Framework/Managers/NettoyeurManager.php</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Mini Journal
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="namespaces.html"><span>Espaces&#160;de&#160;nommage</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Variables&#160;globale</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7bc6a6042ae5b9f0f55328f36587c0f7.html">minijournal</a></li><li class="navelem"><a class="el" href="dir_78ba028a1774fe74a085de384f4f9c86.html">lib</a></li><li class="navelem"><a class="el" href="dir_ed6d6ca7fd0b908cfa29419608cfb8ce.html">Sd</a></li><li class="navelem"><a class="el" href="dir_5c5ec39f1592f525aa3eb4709d26d21c.html">Framework</a></li><li class="navelem"><a class="el" href="dir_b997624973054c31a359862555760509.html">Managers</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">NettoyeurManager.php</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="NettoyeurManager_8php.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceSd_1_1Framework_1_1Managers.html">Sd\Framework\Managers</a>;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;use <a class="code" href="namespaceSd_1_1Framework_1_1AppInterfaces_1_1NettoyeurInterface.html">Sd\Framework\AppInterfaces\NettoyeurInterface</a>;</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"></span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/**</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * Classe NettoyeurManager gérant les nettoyeurs.</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * @package Sd\Framework\Managers</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> */</span></div><div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classSd_1_1Framework_1_1Managers_1_1NettoyeurManager.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSd_1_1Framework_1_1Managers_1_1NettoyeurManager.html">NettoyeurManager</a></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{<span class="comment"></span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">    /**</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">     * @var array</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">     */</span></div><div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classSd_1_1Framework_1_1Managers_1_1NettoyeurManager.html#adc89c93a9583283461be76a82c47c2d3">   15</a></span>&#160;    <span class="keyword">private</span> <a class="code" href="classSd_1_1Framework_1_1Managers_1_1NettoyeurManager.html#adc89c93a9583283461be76a82c47c2d3">$nettoyeurs</a> = array();</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"></span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">    /**</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">     * Permet de définir les nettoyeurs à utiliser sur une valeur donnée.</span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">     * @param $propriete</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">     * @param NettoyeurInterface $nettoyeur</span></div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">     * @return $this</span></div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">     */</span></div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classSd_1_1Framework_1_1Managers_1_1NettoyeurManager.html#ae2b430077d7a9ab67ab7b2bbceae38c4">   23</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classSd_1_1Framework_1_1Managers_1_1NettoyeurManager.html#ae2b430077d7a9ab67ab7b2bbceae38c4">ajouter</a>($propriete, <a class="code" href="interfaceSd_1_1Framework_1_1AppInterfaces_1_1NettoyeurInterface.html">NettoyeurInterface</a> $nettoyeur)</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    {</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        $this-&gt;nettoyeurs[] = [$propriete, $nettoyeur];</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">return</span> $this;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"></span></div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">    /**</span></div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">     * Permet d&#39;exécuter le nettoyage selon la liste des nettoyeurs.</span></div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">     * @param $form</span></div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">     * @return mixed</span></div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">     */</span></div><div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classSd_1_1Framework_1_1Managers_1_1NettoyeurManager.html#a15b3185d60d2693fecc9a58b0dc16a54">   34</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classSd_1_1Framework_1_1Managers_1_1NettoyeurManager.html#a15b3185d60d2693fecc9a58b0dc16a54">nettoyer</a>($form)</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    {</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">foreach</span> ($this-&gt;nettoyeurs as $nettoyeurItem) {</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            $propriete = $nettoyeurItem[0];</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            $nettoyeur = $nettoyeurItem[1];</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            $form[$propriete] = $nettoyeur-&gt;nettoyer($form[$propriete]);</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        }</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">return</span> $form;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div><div class="ttc" id="namespaceSd_1_1Framework_1_1Managers_html"><div class="ttname"><a href="namespaceSd_1_1Framework_1_1Managers.html">Sd\Framework\Managers</a></div><div class="ttdef"><b>Definition:</b> <a href="FileManager_8php_source.html#l00002">FileManager.php:2</a></div></div>
+<div class="ttc" id="classSd_1_1Framework_1_1Managers_1_1NettoyeurManager_html_adc89c93a9583283461be76a82c47c2d3"><div class="ttname"><a href="classSd_1_1Framework_1_1Managers_1_1NettoyeurManager.html#adc89c93a9583283461be76a82c47c2d3">Sd\Framework\Managers\NettoyeurManager\$nettoyeurs</a></div><div class="ttdeci">$nettoyeurs</div><div class="ttdef"><b>Definition:</b> <a href="NettoyeurManager_8php_source.html#l00015">NettoyeurManager.php:15</a></div></div>
+<div class="ttc" id="classSd_1_1Framework_1_1Managers_1_1NettoyeurManager_html_ae2b430077d7a9ab67ab7b2bbceae38c4"><div class="ttname"><a href="classSd_1_1Framework_1_1Managers_1_1NettoyeurManager.html#ae2b430077d7a9ab67ab7b2bbceae38c4">Sd\Framework\Managers\NettoyeurManager\ajouter</a></div><div class="ttdeci">ajouter($propriete, NettoyeurInterface $nettoyeur)</div><div class="ttdef"><b>Definition:</b> <a href="NettoyeurManager_8php_source.html#l00023">NettoyeurManager.php:23</a></div></div>
+<div class="ttc" id="classSd_1_1Framework_1_1Managers_1_1NettoyeurManager_html_a15b3185d60d2693fecc9a58b0dc16a54"><div class="ttname"><a href="classSd_1_1Framework_1_1Managers_1_1NettoyeurManager.html#a15b3185d60d2693fecc9a58b0dc16a54">Sd\Framework\Managers\NettoyeurManager\nettoyer</a></div><div class="ttdeci">nettoyer($form)</div><div class="ttdef"><b>Definition:</b> <a href="NettoyeurManager_8php_source.html#l00034">NettoyeurManager.php:34</a></div></div>
+<div class="ttc" id="namespaceSd_1_1Framework_1_1AppInterfaces_1_1NettoyeurInterface_html"><div class="ttname"><a href="namespaceSd_1_1Framework_1_1AppInterfaces_1_1NettoyeurInterface.html">NettoyeurInterface</a></div></div>
+<div class="ttc" id="classSd_1_1Framework_1_1Managers_1_1NettoyeurManager_html"><div class="ttname"><a href="classSd_1_1Framework_1_1Managers_1_1NettoyeurManager.html">Sd\Framework\Managers\NettoyeurManager</a></div><div class="ttdef"><b>Definition:</b> <a href="NettoyeurManager_8php_source.html#l00010">NettoyeurManager.php:10</a></div></div>
+<div class="ttc" id="interfaceSd_1_1Framework_1_1AppInterfaces_1_1NettoyeurInterface_html"><div class="ttname"><a href="interfaceSd_1_1Framework_1_1AppInterfaces_1_1NettoyeurInterface.html">Sd\Framework\AppInterfaces\NettoyeurInterface</a></div><div class="ttdef"><b>Definition:</b> <a href="NettoyeurInterface_8php_source.html#l00008">NettoyeurInterface.php:8</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

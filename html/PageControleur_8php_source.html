@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Mini Journal:  Fichier source de minijournal/lib/Sd/MiniJournal/Page/PageControleur.php</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Mini Journal
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="namespaces.html"><span>Espaces&#160;de&#160;nommage</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Variables&#160;globale</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7bc6a6042ae5b9f0f55328f36587c0f7.html">minijournal</a></li><li class="navelem"><a class="el" href="dir_78ba028a1774fe74a085de384f4f9c86.html">lib</a></li><li class="navelem"><a class="el" href="dir_ed6d6ca7fd0b908cfa29419608cfb8ce.html">Sd</a></li><li class="navelem"><a class="el" href="dir_ac4d8069e49e6cc267642b3837c8bf58.html">MiniJournal</a></li><li class="navelem"><a class="el" href="dir_aeffb7e4e8d98bdd7fe1ce74ff048994.html">Page</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">PageControleur.php</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="PageControleur_8php.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div><div class="line"><a name="l00002"></a><span class="lineno"><a class="line" href="namespaceSd_1_1MiniJournal_1_1Page.html">    2</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceSd_1_1MiniJournal_1_1Page.html">Sd\MiniJournal\Page</a>;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;use <a class="code" href="namespaceSd_1_1Framework_1_1AbstractClasses_1_1AbstractControleur.html">Sd\Framework\AbstractClasses\AbstractControleur</a>;</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;use <a class="code" href="namespaceSd_1_1Framework_1_1HttpFoundation_1_1Reponse.html">Sd\Framework\HttpFoundation\Reponse</a>;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;use <a class="code" href="namespaceSd_1_1Framework_1_1HttpFoundation_1_1Requete.html">Sd\Framework\HttpFoundation\Requete</a>;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"></span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/**</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * Classe PageControleur</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * @package Sd\MiniJournal\Page</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> */</span></div><div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classSd_1_1MiniJournal_1_1Page_1_1PageControleur.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSd_1_1MiniJournal_1_1Page_1_1PageControleur.html">PageControleur</a> <span class="keyword">extends</span> <a class="code" href="classSd_1_1Framework_1_1AbstractClasses_1_1AbstractControleur.html">AbstractControleur</a></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{<span class="comment"></span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">    /**</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">     * @var Requete</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">     */</span></div><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classSd_1_1MiniJournal_1_1Page_1_1PageControleur.html#aa461d07a98c1665ee6088b2c6d37363c">   17</a></span>&#160;    <span class="keyword">private</span> <a class="code" href="classSd_1_1MiniJournal_1_1Page_1_1PageControleur.html#aa461d07a98c1665ee6088b2c6d37363c">$requete</a>;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"></span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">    /**</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">     * Constructeur de la classe PageControleur.</span></div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">     * @param Requete $requete</span></div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">     * @param Reponse $reponse</span></div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">     */</span></div><div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classSd_1_1MiniJournal_1_1Page_1_1PageControleur.html#aad69c2e3596e261ea7cbbee2c3524d02">   24</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classSd_1_1MiniJournal_1_1Page_1_1PageControleur.html#aad69c2e3596e261ea7cbbee2c3524d02">__construct</a>(<a class="code" href="classSd_1_1Framework_1_1HttpFoundation_1_1Requete.html">Requete</a> <a class="code" href="classSd_1_1MiniJournal_1_1Page_1_1PageControleur.html#aa461d07a98c1665ee6088b2c6d37363c">$requete</a>, <a class="code" href="classSd_1_1Framework_1_1HttpFoundation_1_1Reponse.html">Reponse</a> <a class="code" href="classSd_1_1Framework_1_1AbstractClasses_1_1AbstractControleur.html#a4ccddbea20c5ccc01be9af073cb36732">$reponse</a>)</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    {</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        $this-&gt;requete = <a class="code" href="classSd_1_1MiniJournal_1_1Page_1_1PageControleur.html#aa461d07a98c1665ee6088b2c6d37363c">$requete</a>;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        parent::__construct($reponse);</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"></span></div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">    /**</span></div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">     * Affiche la page A propos.</span></div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">     */</span></div><div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classSd_1_1MiniJournal_1_1Page_1_1PageControleur.html#a26403f8c17a4fc139f85f9231110087b">   33</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classSd_1_1MiniJournal_1_1Page_1_1PageControleur.html#a26403f8c17a4fc139f85f9231110087b">about</a>()</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        $this-&gt;<a class="code" href="classSd_1_1Framework_1_1AbstractClasses_1_1AbstractControleur.html#ac31802c800c56576483834993eeb15e3">afficheur</a>(<span class="stringliteral">&#39;about.twig&#39;</span>);</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment"></span></div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">    /**</span></div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">     * Affiche la page d&#39;accueil.</span></div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">     */</span></div><div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classSd_1_1MiniJournal_1_1Page_1_1PageControleur.html#aa2f400d5d161d563f9133f929e7109dc">   41</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classSd_1_1MiniJournal_1_1Page_1_1PageControleur.html#aa2f400d5d161d563f9133f929e7109dc">home</a>()</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    {</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        $this-&gt;<a class="code" href="classSd_1_1Framework_1_1AbstractClasses_1_1AbstractControleur.html#ac31802c800c56576483834993eeb15e3">afficheur</a>(<span class="stringliteral">&#39;index.twig&#39;</span>);</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div><div class="ttc" id="classSd_1_1MiniJournal_1_1Page_1_1PageControleur_html_aad69c2e3596e261ea7cbbee2c3524d02"><div class="ttname"><a href="classSd_1_1MiniJournal_1_1Page_1_1PageControleur.html#aad69c2e3596e261ea7cbbee2c3524d02">Sd\MiniJournal\Page\PageControleur\__construct</a></div><div class="ttdeci">__construct(Requete $requete, Reponse $reponse)</div><div class="ttdef"><b>Definition:</b> <a href="PageControleur_8php_source.html#l00024">PageControleur.php:24</a></div></div>
+<div class="ttc" id="namespaceSd_1_1Framework_1_1HttpFoundation_1_1Requete_html"><div class="ttname"><a href="namespaceSd_1_1Framework_1_1HttpFoundation_1_1Requete.html">Requete</a></div></div>
+<div class="ttc" id="classSd_1_1Framework_1_1AbstractClasses_1_1AbstractControleur_html_ac31802c800c56576483834993eeb15e3"><div class="ttname"><a href="classSd_1_1Framework_1_1AbstractClasses_1_1AbstractControleur.html#ac31802c800c56576483834993eeb15e3">Sd\Framework\AbstractClasses\AbstractControleur\afficheur</a></div><div class="ttdeci">afficheur($file, $fragments=null)</div><div class="ttdef"><b>Definition:</b> <a href="AbstractControleur_8php_source.html#l00047">AbstractControleur.php:47</a></div></div>
+<div class="ttc" id="classSd_1_1Framework_1_1AbstractClasses_1_1AbstractControleur_html"><div class="ttname"><a href="classSd_1_1Framework_1_1AbstractClasses_1_1AbstractControleur.html">Sd\Framework\AbstractClasses\AbstractControleur</a></div><div class="ttdef"><b>Definition:</b> <a href="AbstractControleur_8php_source.html#l00010">AbstractControleur.php:10</a></div></div>
+<div class="ttc" id="namespaceSd_1_1Framework_1_1HttpFoundation_1_1Reponse_html"><div class="ttname"><a href="namespaceSd_1_1Framework_1_1HttpFoundation_1_1Reponse.html">Reponse</a></div></div>
+<div class="ttc" id="classSd_1_1MiniJournal_1_1Page_1_1PageControleur_html_a26403f8c17a4fc139f85f9231110087b"><div class="ttname"><a href="classSd_1_1MiniJournal_1_1Page_1_1PageControleur.html#a26403f8c17a4fc139f85f9231110087b">Sd\MiniJournal\Page\PageControleur\about</a></div><div class="ttdeci">about()</div><div class="ttdef"><b>Definition:</b> <a href="PageControleur_8php_source.html#l00033">PageControleur.php:33</a></div></div>
+<div class="ttc" id="classSd_1_1Framework_1_1HttpFoundation_1_1Reponse_html"><div class="ttname"><a href="classSd_1_1Framework_1_1HttpFoundation_1_1Reponse.html">Sd\Framework\HttpFoundation\Reponse</a></div><div class="ttdef"><b>Definition:</b> <a href="Reponse_8php_source.html#l00008">Reponse.php:8</a></div></div>
+<div class="ttc" id="namespaceSd_1_1MiniJournal_1_1Page_html"><div class="ttname"><a href="namespaceSd_1_1MiniJournal_1_1Page.html">Sd\MiniJournal\Page</a></div><div class="ttdef"><b>Definition:</b> <a href="PageControleur_8php_source.html#l00002">PageControleur.php:2</a></div></div>
+<div class="ttc" id="namespaceSd_1_1Framework_1_1AbstractClasses_1_1AbstractControleur_html"><div class="ttname"><a href="namespaceSd_1_1Framework_1_1AbstractClasses_1_1AbstractControleur.html">AbstractControleur</a></div></div>
+<div class="ttc" id="classSd_1_1MiniJournal_1_1Page_1_1PageControleur_html"><div class="ttname"><a href="classSd_1_1MiniJournal_1_1Page_1_1PageControleur.html">Sd\MiniJournal\Page\PageControleur</a></div><div class="ttdef"><b>Definition:</b> <a href="PageControleur_8php_source.html#l00012">PageControleur.php:12</a></div></div>
+<div class="ttc" id="classSd_1_1Framework_1_1AbstractClasses_1_1AbstractControleur_html_a4ccddbea20c5ccc01be9af073cb36732"><div class="ttname"><a href="classSd_1_1Framework_1_1AbstractClasses_1_1AbstractControleur.html#a4ccddbea20c5ccc01be9af073cb36732">Sd\Framework\AbstractClasses\AbstractControleur\$reponse</a></div><div class="ttdeci">$reponse</div><div class="ttdef"><b>Definition:</b> <a href="AbstractControleur_8php_source.html#l00015">AbstractControleur.php:15</a></div></div>
+<div class="ttc" id="classSd_1_1MiniJournal_1_1Page_1_1PageControleur_html_aa461d07a98c1665ee6088b2c6d37363c"><div class="ttname"><a href="classSd_1_1MiniJournal_1_1Page_1_1PageControleur.html#aa461d07a98c1665ee6088b2c6d37363c">Sd\MiniJournal\Page\PageControleur\$requete</a></div><div class="ttdeci">$requete</div><div class="ttdef"><b>Definition:</b> <a href="PageControleur_8php_source.html#l00017">PageControleur.php:17</a></div></div>
+<div class="ttc" id="classSd_1_1Framework_1_1HttpFoundation_1_1Requete_html"><div class="ttname"><a href="classSd_1_1Framework_1_1HttpFoundation_1_1Requete.html">Sd\Framework\HttpFoundation\Requete</a></div><div class="ttdef"><b>Definition:</b> <a href="Requete_8php_source.html#l00009">Requete.php:9</a></div></div>
+<div class="ttc" id="classSd_1_1MiniJournal_1_1Page_1_1PageControleur_html_aa2f400d5d161d563f9133f929e7109dc"><div class="ttname"><a href="classSd_1_1MiniJournal_1_1Page_1_1PageControleur.html#aa2f400d5d161d563f9133f929e7109dc">Sd\MiniJournal\Page\PageControleur\home</a></div><div class="ttdeci">home()</div><div class="ttdef"><b>Definition:</b> <a href="PageControleur_8php_source.html#l00041">PageControleur.php:41</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

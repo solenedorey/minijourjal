@@ -1,0 +1,6 @@
+<map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
+<area shape="rect" id="node1" href="$classSd_1_1Framework_1_1AbstractClasses_1_1AbstractControleur.html" title="Sd\\Framework\\AbstractClasses\l\\AbstractControleur" alt="" coords="5,71,213,112"/>
+<area shape="rect" id="node2" href="$classSd_1_1MiniJournal_1_1Article_1_1ArticleControleur.html" title="Sd\\MiniJournal\\Article\l\\ArticleControleur" alt="" coords="261,5,411,47"/>
+<area shape="rect" id="node3" href="$classSd_1_1MiniJournal_1_1Image_1_1ImageControleur.html" title="Sd\\MiniJournal\\Image\l\\ImageControleur" alt="" coords="262,71,410,112"/>
+<area shape="rect" id="node4" href="$classSd_1_1MiniJournal_1_1Page_1_1PageControleur.html" title="Sd\\MiniJournal\\Page\l\\PageControleur" alt="" coords="265,136,407,177"/>
+</map>

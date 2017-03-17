@@ -4,7 +4,7 @@ namespace Sd\Framework\AbstractClasses;
 use Sd\Framework\AppInterfaces\FormInterface;
 
 /**
- * Class AbstractDocumentForm
+ * Classe AbstractDocumentForm
  * @package Sd\Framework\AbstractClasses
  */
 abstract class AbstractDocumentForm implements FormInterface
@@ -13,18 +13,33 @@ abstract class AbstractDocumentForm implements FormInterface
      * @var AbstractDocument
      */
     protected $document;
+
     /**
      * @var
      */
     protected $erreurs;
 
     /**
-     * AbstractDocumentForm constructor.
+     * Constructeur de la classe AbstractDocumentForm.
      * @param AbstractDocument $document
      */
     public function __construct(AbstractDocument $document)
     {
         $this->document = $document;
+    }
+
+    /**
+     * Permet de récupérer une erreur.
+     * @param $champ
+     * @return string
+     */
+    public function getErreur($champ)
+    {
+        if (isset($this->erreurs[$champ])) {
+            return '<span class="erreur">' . $this->erreurs[$champ] . '</span>';
+        } else {
+            return '';
+        }
     }
 
     /**
@@ -36,18 +51,10 @@ abstract class AbstractDocumentForm implements FormInterface
     }
 
     /**
-     * @param $champ
-     * @return string
+     * Permet de récupérer les actions de nettoyage à réaliser sur les différentes valeurs et d'exécuter ces actions.
+     * @param $form
+     * @return mixed
      */
-    public function getErreur($champ)
-    {
-        if (isset($this->erreurs[$champ])) {
-            return "<span class=\"erreur\">{$this->erreurs[$champ]}</span>";
-        } else {
-            return '';
-        }
-    }
-
     public static function nettoyer($form)
     {
         $manager = static::strategieNettoyage();
@@ -56,6 +63,7 @@ abstract class AbstractDocumentForm implements FormInterface
     }
 
     /**
+     * Permet de récupérer les actions de validation à réaliser sur les différentes valeurs et d'exécuter ces actions.
      * @return bool
      */
     public function estValide()

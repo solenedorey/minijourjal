@@ -14,9 +14,16 @@ use Sd\Framework\Validateurs\LongueurMaxi;
 use Sd\Framework\Validateurs\TailleFichierValide;
 use Sd\Framework\Validateurs\TypeMimeValide;
 
-
+/**
+ * Classe ImageForm
+ * @package Sd\MiniJournal\Image
+ */
 class ImageForm extends AbstractDocumentForm
 {
+    /**
+     * Permet de nettoyer les données postées via un formulaire.
+     * @return NettoyeurManager
+     */
     public static function strategieNettoyage()
     {
         $nettoyeurManager = new NettoyeurManager();
@@ -27,6 +34,10 @@ class ImageForm extends AbstractDocumentForm
         return $nettoyeurManager;
     }
 
+    /**
+     * Permet de valider les données postées via un formulaire.
+     * @return ValidateurManager
+     */
     public function strategieValidation()
     {
         $validateurManager = new ValidateurManager();

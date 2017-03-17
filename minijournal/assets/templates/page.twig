@@ -1,16 +1,38 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <title>Mini journal</title>
     <script src="vendor/ckeditor/ckeditor/ckeditor.js"></script>
+    <script src="https://use.fontawesome.com/8a7d364ade.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-
-<h1><a href="index.php">Mini Journal</a></h1>
-<h2>{% block titre %}{% endblock %}</h2>
-{% block contenu %}{% endblock %}
-<div><a href="index.php?objet=image&amp;action=afficherListe">Liste des images</a></div>
+<header class="principal">
+    <img src="assets/media/images/news.png" alt="logo">
+    <h1><a href="index.php">Mini Journal</a></h1>
+    <nav id="menu_principal">
+        <ul>
+            <li>
+                <a href="index.php">Accueil</a>
+            </li>
+            <li>
+                <a href="index.php?objet=about&action=about">A propos</a>
+            </li>
+            <li>
+                <a href="index.php?objet=article&amp;action=afficherListe">Articles</a>
+            </li>
+            <li>
+                <a href="index.php?objet=image&amp;action=afficherListe">Images</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <h2>{% block titre %}{% endblock %}</h2>
+    {% block contenu %}{% endblock %}
+</main>
 </body>
 </html>

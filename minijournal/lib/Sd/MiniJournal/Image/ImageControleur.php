@@ -1,12 +1,16 @@
 <?php
 namespace Sd\MiniJournal\Image;
 
-use Sd\Framework\AbstractClasses\AbstractDocumentControleur;
+use Sd\Framework\AbstractClasses\AbstractControleur;
 use Sd\Framework\Managers\FileManager;
 use Sd\Framework\HttpFoundation\Reponse;
 use Sd\Framework\HttpFoundation\Requete;
 
-class ImageControleur extends AbstractDocumentControleur
+/**
+ * Classe ImageControleur
+ * @package Sd\MiniJournal\Image
+ */
+class ImageControleur extends AbstractControleur
 {
     /**
      * @var ImageBd
@@ -18,10 +22,9 @@ class ImageControleur extends AbstractDocumentControleur
     private $requete;
 
     /**
-     * ImageControleur constructor.
+     * Cosntructeur de la classe ImageControleur.
      * @param Requete $requete
      * @param Reponse $reponse
-     * @param $twig
      */
     public function __construct(Requete $requete, Reponse $reponse)
     {
@@ -31,7 +34,7 @@ class ImageControleur extends AbstractDocumentControleur
     }
 
     /**
-     *
+     * Afficher la liste des images.
      */
     public function afficherListe()
     {
@@ -40,7 +43,10 @@ class ImageControleur extends AbstractDocumentControleur
     }
 
     /**
-     *
+     * Voir une Image
+     * - obtenir l'identifiant de l'image à partir de $_GET
+     * - récupérer les infos de l'image et instancier un objet Image (méthode lire de ArticleBd)
+     * - afficher l'Image
      */
     public function afficherDetail()
     {
@@ -50,7 +56,9 @@ class ImageControleur extends AbstractDocumentControleur
     }
 
     /**
-     *
+     * Création/modification d'une image :
+     * - initialiser une image "vide" ou lecture en BD de l'image à modifier
+     * - instancier l'objet gérant le formulaire et créer le formulaire
      */
     public function editer()
     {
@@ -64,7 +72,13 @@ class ImageControleur extends AbstractDocumentControleur
     }
 
     /**
-     *
+     * Enregistrement d'une nouvelle image :
+     * - récupérer les données POST et les nettoyer
+     * - initialiser un objet Image avec ces données ou bien lire l'image en BD et la modifier
+     * - instancier un gestionnaire du formulaire
+     * - demander au gestionnaire si les données sont valides :
+     *     - si oui, enregister l'image en BD puis l'afficher
+     *     - si non, réafficher le formulaire avec les erreurs
      */
     public function enregistrer()
     {
@@ -87,7 +101,7 @@ class ImageControleur extends AbstractDocumentControleur
         if ($form->estValide()) {
             if ($this->requete->getItemFiles('fichier')['tmp_name'] !== '') {
                 $path = IMAGE_BASEFILE . $oldName;
-                if (is_file($path)){
+                if (is_file($path)) {
                     unlink($path);
                 }
                 $fichier = new FileManager();
@@ -102,7 +116,7 @@ class ImageControleur extends AbstractDocumentControleur
     }
 
     /**
-     *
+     * Supprime l'Image.php
      */
     public function supprimer()
     {
@@ -111,6 +125,6 @@ class ImageControleur extends AbstractDocumentControleur
         $path = IMAGE_BASEFILE . $image->getFichier();
         unlink($path);
         $this->imageBd->supprimer($idImage);
-        header('Location: index.php?objet=image&amp;action=afficherListe');
+        header('Location: index.php?objet=image&action=afficherListe');
     }
 }

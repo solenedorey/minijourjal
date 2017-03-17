@@ -3,16 +3,35 @@ namespace Sd\Framework\Managers;
 
 use Sd\Framework\AppInterfaces\ValidateurInterface;
 
+/**
+ * Classe ValidateurManager gérant les validateurs.
+ * @package Sd\Framework\Managers
+ */
 class ValidateurManager
 {
+    /**
+     * @var array
+     */
     private $validateurs = array();
 
+    /**
+     * Permet de définir les validateurs à utiliser sur une valeur donnée.
+     * @param $propriete
+     * @param ValidateurInterface $validateur
+     * @return $this
+     */
     public function ajouter($propriete, ValidateurInterface $validateur)
     {
         $this->validateurs[] = [$propriete, $validateur];
         return $this;
     }
 
+    /**
+     * Permet d'exécuter la validation selon la liste des validateurs.
+     * @param $objet
+     * @return array
+     * @throws \Exception
+     */
     public function valider($objet)
     {
         $erreurs =array();

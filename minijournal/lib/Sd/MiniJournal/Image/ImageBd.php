@@ -4,15 +4,33 @@ namespace Sd\MiniJournal\Image;
 use Sd\Framework\AbstractClasses\AbstractDocument;
 use Sd\Framework\AbstractClasses\AbstractDocumentBd;
 
+/**
+ * Classe ImageBd
+ * @package Sd\MiniJournal\Image
+ */
 class ImageBd extends AbstractDocumentBd
 {
+    /**
+     * Constante permettant de stocker le nom de la table de la BD.
+     */
     const TABLE_NAME = 'image';
 
+    /**
+     * Constructeur de la classe ImageBd.
+     */
     public function __construct()
     {
         parent::__construct();
     }
 
+    /**
+     * Permet de lire en bd une image.
+     *
+     * Effectue la requête SELECT et instancie un objet Image avec les données extraites de la BD.
+     * @param $idImage
+     * @return Image
+     * @throws \Exception
+     */
     public function lire($idImage)
     {
         $requete = "SELECT * 
@@ -32,6 +50,10 @@ class ImageBd extends AbstractDocumentBd
         return $image;
     }
 
+    /**
+     * Permet de lire en BD une liste d'article.
+     * @return array
+     */
     public function lireTous()
     {
         $requete = "SELECT * 
@@ -52,6 +74,11 @@ class ImageBd extends AbstractDocumentBd
         return $liste;
     }
 
+    /**
+     * Permet l'enregistrement en BD d'un article.
+     * @param AbstractDocument $image
+     * @return mixed
+     */
     public function enregistrer(AbstractDocument $image)
     {
         $requete = "INSERT INTO " . self::TABLE_NAME . " " .
@@ -60,6 +87,11 @@ class ImageBd extends AbstractDocumentBd
         return $this->db->lastInsertId();
     }
 
+    /**
+     * Permet la modification en BD d'un document.
+     * @param AbstractDocument $image
+     * @return bool
+     */
     public function modifier(AbstractDocument $image)
     {
         $requete = "UPDATE " . self::TABLE_NAME . " " . $this->partieRequete() . " WHERE id_image=:idImage";
@@ -68,12 +100,22 @@ class ImageBd extends AbstractDocumentBd
         return parent::requete($requete, false, $data);
     }
 
+    /**
+     * Méthode interne pour la partie commune de la requête.
+     * @return string
+     */
     protected function partieRequete()
     {
         $sql = "SET titre=:titre, auteur=:auteur, fichier=:fichier";
         return $sql;
     }
 
+    /**
+     * Méthode interne pour construire le tableau de donées à donner en paramètre pour l'exécution de la requete
+     * préparée.
+     * @param AbstractDocument $article
+     * @return array
+     */
     protected function partieData(AbstractDocument $article)
     {
         return array(
@@ -83,6 +125,11 @@ class ImageBd extends AbstractDocumentBd
         );
     }
 
+    /**
+     * Permet la suppression en BD d'un article.
+     * @param $idImage
+     * @return bool
+     */
     public function supprimer($idImage)
     {
         $requete = "DELETE FROM " . self::TABLE_NAME . " WHERE id_image=:idImage";

@@ -1,8 +1,17 @@
 <?php
 namespace Sd\Framework\Managers;
 
+/**
+ * Classe FileManager gérant l'upload de fichiers.
+ * @package Sd\Framework\Managers
+ */
 class FileManager
 {
+    /**
+     * Permet de renommer et de déplacer le fichier uploadé.
+     * @param $tmp_name
+     * @return string
+     */
     public function upload($tmp_name)
     {
         $extension = $this->getExtension($tmp_name);
@@ -16,6 +25,11 @@ class FileManager
         return $newName;
     }
 
+    /**
+     * Permet de récupérer l'extension du fichier.
+     * @param $file
+     * @return array|string
+     */
     public function getExtension($file)
     {
         $type = getimagesize($file);
@@ -23,6 +37,11 @@ class FileManager
         return $type;
     }
 
+    /**
+     * Permet de créer un nom unique.
+     * @param null $prefix
+     * @return string
+     */
     public function creerNomUnique($prefix = null)
     {
         $name = uniqid($prefix);

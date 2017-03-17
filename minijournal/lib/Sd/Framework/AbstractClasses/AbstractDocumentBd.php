@@ -5,7 +5,7 @@ use Sd\Framework\AppInterfaces\PersistInterface;
 use Jml\Tools\Database\ConnectionSingleton;
 
 /**
- * Class AbstractDocumentBd
+ * Classe AbstractDocumentBd
  * @package Sd\Framework\AbstractClasses
  */
 abstract class AbstractDocumentBd implements PersistInterface
@@ -16,7 +16,7 @@ abstract class AbstractDocumentBd implements PersistInterface
     protected $db;
 
     /**
-     * AbstractDocumentBd constructor.
+     * Constructeur de la classe AbstractDocumentBd.
      */
     public function __construct()
     {
@@ -24,6 +24,7 @@ abstract class AbstractDocumentBd implements PersistInterface
     }
 
     /**
+     * Permet d'exécuter une requête en base de données.
      * @param $requete
      * @param $return
      * @param null $param
@@ -48,6 +49,7 @@ abstract class AbstractDocumentBd implements PersistInterface
     abstract public function lireTous();
 
     /**
+     * Permet d'enregistrer ou de modifier des données en base de données.
      * @param AbstractDocument $document
      * @return mixed
      */

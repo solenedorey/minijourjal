@@ -1,22 +1,32 @@
 <?php
 namespace Sd\Framework\HttpFoundation;
 
+/**
+ * Classe Reponse passée au contrôleur afin que les données de réponse puissent être remplies.
+ * @package Sd\Framework\HttpFoundation
+ */
 class Reponse
 {
+    /**
+     * @var array
+     */
     private $fragments;
+    /**
+     * @var
+     */
     private $file;
 
+    /**
+     * Constructeur de la classe Reponse.
+     */
     public function __construct()
     {
         $this->fragments = array();
     }
 
-    public function ajouterFragment($nom, $contenu)
-    {
-        $this->fragments[$nom] = $contenu;
-
-    }
-
+    /**
+     * @return array
+     */
     public function getFragments()
     {
         return $this->fragments;
