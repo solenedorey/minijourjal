@@ -1,4 +1,4 @@
-{% extends 'page.twig' %}
+{% extends 'layout.twig' %}
 
 {% block titre %}
     Liste des articles
@@ -8,18 +8,32 @@
     {% if articles is empty %}
         <p>Aucun article</p>
     {% else %}
-        <ul>
+        <ul class="liste-articles">
             {% for article in articles %}
-                <li>
-                    <a href="index.php?objet=article&amp;action=afficherDetail&amp;idArticle={{ article.id }}">
-                        {{ article.titre }}
-                    </a>
-                    <a href="index.php?objet=article&amp;action=editer&amp;idArticle={{ article.id }}"> - Modifier -</a>
-                    <a href="index.php?objet=article&amp;action=supprimer&amp;idArticle={{ article.id }}"> Supprimer
-                        -</a>
-                </li>
+                {% if article.statutPublication == 2 or global.session.statut == 'admin' or global.session.login  ==
+                article.auteur %}
+                    <li data-id="{{ article.id }}">
+                        <a href="index.php?objet=article&amp;action=afficherDetail&amp;idArticle={{ article.id }}">
+                            {{ article.titre }}
+                        </a>
+                        {% if global.session.login  == article.auteur or global.session.statut == 'admin' %}
+                            <a href="index.php?objet=article&amp;action=editer&amp;idArticle={{ article.id }}"
+                               class="button bouton-modification"><span>Modifier</span></a>
+                            {% if article.statutPublication == 1 %}
+                                <a href="index.php?objet=article&amp;action=supprimer&amp;idArticle={{ article.id }}"
+                                   class="button bouton-suppression"
+                                   data-id="{{ article.id }}"><span>Supprimer</span></a>
+                            {% endif %}
+                        {% endif %}
+                    </li>
+                {% endif %}
             {% endfor %}
         </ul>
     {% endif %}
     <div><a href="index.php?objet=article&amp;action=editer">Nouvel article</a></div>
+{% endblock %}
+
+{% block javascript %}
+    <script src="assets/js/cleanNode.js"></script>
+    <script src="assets/js/ajaxDeleteArticle.js"></script>
 {% endblock %}

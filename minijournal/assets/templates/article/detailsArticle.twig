@@ -1,34 +1,86 @@
-{%  extends 'page.twig' %}
+{% extends 'layout.twig' %}
+
+{% block meta %}
+    <!-- Métadonnées du DublinCore -->
+    <meta name="DC.title" content="{{ article.titre }}"/>
+    <meta name="DC.Creator" content="{{ article.auteur }}">
+    <meta name="DC.Description" content="Un article sur {{ article.titre }}, dans l'univers d'Harry Potter">
+    <meta name="DC.Publisher" content="{{ article.auteur }}">
+    {% if article.statutPublication == 2 %}
+        <meta name="DC.Date" content="{{ article.datePublication }}">
+    {% endif %}
+    <!-- Métadonnées Facebook -->
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="{{ article.titre }}"/>
+    <meta property="og:url" content="{{ request_uri() }}"/>
+    <meta property="og:description" content="Un article sur {{ article.titre }}, dans l'univers d'Harry Potter"/>
+    <!-- Métadonnées Twitter -->
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="{{ request_uri() }}"/>
+    <meta name="twitter:title" content="{{ article.titre }}"/>
+    <meta name="twitter:description" content="Un article sur {{ article.titre }}, dans l'univers d'Harry Potter"/>
+    {% if article.listImages is defined and not article.listImages is empty %}
+        <meta name="twitter:image"
+              content="https://dev-21304033.users.info.unicaen.fr/Master/Programmation Objet/TP9/minijournal/{{ constant('IMAGE_BASEFILE')~article.listImages[0].fichier }}"/>
+    {% else %}
+        <meta name="twitter:image"
+              content="https://dev-21304033.users.info.unicaen.fr/Master/Programmation Objet/TP9/minijournal/{{ constant('IMAGE_BASEFILE') }}/news.png"/>
+    {% endif %}
+{% endblock %}
 
 {% block titre %}
     Détail de l'article
 {% endblock %}
 
 {% block contenu %}
-<article>
-    <header>
-        <h3>{{ article.titre }}</h3>
-        <h2>{{ article.auteur }}</h2>
-        <p>{{ article.chapo }}</p>
-    </header>
-    <p>{{ article.contenu|raw }}</p>
-    <footer>
-        <table>
-            <tr>
-                <th>Date de création</th>
-                {% if article.statut == 1 %}
-                <th>Date de publication</th>
-                {% endif %}
-            </tr>
-            <tr>
-                <td>{{ article.dateCreation }}</td>
-                {% if article.statut == 1 %}
-                <td>{{ article.datePublication }}</td>
-                {% endif %}
-            </tr>
-        </table>
-    </footer>
-</article>
+    <a href="index.php?objet=article&amp;action=afficherListe">Liste des articles</a>
+    <article itemscope itemtype="http://schema.org/Article">
+        <header>
+            <h2 itemprop="name"><i>{{ article.titre }}</i></h2>
 
-    <h3><a href="index.php?objet=article&amp;action=afficherListe">Liste des articles</a></h3>
+            {% if global.session.login  == article.auteur or global.session.statut == 'admin' %}
+                <a href="index.php?objet=article&amp;action=editer&amp;idArticle={{ article.id }}"
+                   class="button bouton-modification"><span>Modifier</span></a>
+                <button class="button" id="bouton-publication" data-id="{{ article.id }}">
+                    <span>{{ article.statutPublication == '1' ? 'Publier' : 'Remettre en brouillon' }}</span></button>
+            {% endif %}
+
+            <h3 itemprop="author">Auteur : <span itemprop="publisher" itemscope
+                                                 itemtype="http://schema.org/Person">{{ article.auteur }}</span></h3>
+
+            <ul class="date">
+                <li>Date de création : {{ article.dateCreation }}</li>
+                {% if article.statutPublication == 2 %}
+                    <li class="date-publication">Date de publication : <span itemprop="datePublished">{{ article
+                            .datePublication }}</span></li>
+                {% endif %}
+            </ul>
+
+            <p itemprop="headline">{{ article.chapo }}</p>
+        </header>
+        <p>{{ article.contenu|raw }}</p>
+        {% if article.listImages is defined and not article.listImages is empty %}
+            <div class="images_article">
+                {% for image in article.listImages %}
+                    <figure itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+                        <a href="https://dev-21304033.users.info.unicaen.fr/Master/Programmation Objet/TP9/minijournal/{{ constant('IMAGE_BASEFILE')~image.fichier }}"><img
+                                    itemprop="url" src="{{ constant('IMAGE_BASEFILE')~image.fichier }}" alt="{{ image
+                            .titre }}"></a>
+                        <meta itemprop="width" content="auto">
+                        <meta itemprop="height" content="auto">
+                        <figcaption itemprop="caption">
+                            <h2>{{ image.titre }}</h2>
+                            <h3>{{ image.auteur }}</h3>
+                            <p>Date de création : {{ image.dateCreation }}</p>
+                        </figcaption>
+                    </figure>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </article>
+{% endblock %}
+
+{% block javascript %}
+    <script src="assets/js/cleanNode.js"></script>
+    <script src="assets/js/ajaxEditPublicationStatus.js"></script>
 {% endblock %}

@@ -31,8 +31,11 @@ class TypeMimeValide implements ValidateurInterface
      */
     public function valider($valeur)
     {
-        $finfo = new finfo(FILEINFO_MIME_TYPE);
-        return in_array($finfo->file($valeur), $this->mimeListe);
+        if (file_exists($valeur)) {
+            $finfo = new finfo(FILEINFO_MIME_TYPE);
+            return in_array($finfo->file($valeur), $this->mimeListe);
+        }
+        return false;
     }
 
     /**

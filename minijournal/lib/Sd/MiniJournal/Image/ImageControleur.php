@@ -16,10 +16,6 @@ class ImageControleur extends AbstractControleur
      * @var ImageBd
      */
     private $imageBd;
-    /**
-     * @var Requete
-     */
-    private $requete;
 
     /**
      * Cosntructeur de la classe ImageControleur.
@@ -29,8 +25,15 @@ class ImageControleur extends AbstractControleur
     public function __construct(Requete $requete, Reponse $reponse)
     {
         $this->imageBd = new ImageBd();
-        $this->requete = $requete;
-        parent::__construct($reponse);
+        parent::__construct($requete, $reponse);
+    }
+
+    /**
+     * Action par défaut de l'objet Image -> affiche la liste des images.
+     */
+    public function home()
+    {
+        $this->afficherListe();
     }
 
     /**
@@ -65,8 +68,10 @@ class ImageControleur extends AbstractControleur
         if (!is_null($this->requete->getItemGet('idImage'))) {
             $idImage = $this->requete->getItemGet('idImage');
             $image = $this->imageBd->lire($idImage);
+            $this->roleManager->verifyAccess('auteur', $image);
         } else {
             $image = Image::creerDocumentVide();
+            $this->roleManager->verifyAccess('auteur');
         }
         $this->afficheur('image/formImage.twig', array('image' => $image));
     }
@@ -91,11 +96,13 @@ class ImageControleur extends AbstractControleur
             $image = $this->imageBd->lire($idImage);
             $oldName = $image->getFichier();
             if ($formData['fichier'] === '') {
-                $formData['fichier'] = $oldName;
+                $formData['fichier'] = IMAGE_BASEFILE . $oldName;
             }
             $image->modifierDepuisTableau($formData);
+            $this->roleManager->verifyAccess('auteur', $image);
         } else {
             $image = Image::creerDepuisTableau($formData);
+            $this->roleManager->verifyAccess('auteur');
         }
         $form = new ImageForm($image);
         if ($form->estValide()) {
@@ -107,6 +114,8 @@ class ImageControleur extends AbstractControleur
                 $fichier = new FileManager();
                 $fichier = $fichier->upload($formData['fichier']);
                 $image->setFichier($fichier);
+            } else {
+                $image->setFichier($oldName);
             }
             $this->imageBd->persister($image) or die("Problème d'enregistrement en BD");
             $this->afficheur('image/detailsImage.twig', array('image' => $image));
@@ -125,6 +134,6 @@ class ImageControleur extends AbstractControleur
         $path = IMAGE_BASEFILE . $image->getFichier();
         unlink($path);
         $this->imageBd->supprimer($idImage);
-        header('Location: index.php?objet=image&action=afficherListe');
+        $this->afficherListe();
     }
 }

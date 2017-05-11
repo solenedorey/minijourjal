@@ -7,11 +7,12 @@
     <script src="vendor/ckeditor/ckeditor/ckeditor.js"></script>
     <script src="https://use.fontawesome.com/8a7d364ade.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
+    {% block meta %}{% endblock %}
 </head>
 
 <body>
 <header class="principal">
-    <img src="assets/media/images/news.png" alt="logo">
+    <a href="index.php"><img src="assets/media/images/news.png" alt="logo"></a>
     <h1><a href="index.php">Mini Journal</a></h1>
     <nav id="menu_principal">
         <ul>
@@ -19,7 +20,7 @@
                 <a href="index.php">Accueil</a>
             </li>
             <li>
-                <a href="index.php?objet=about&action=about">A propos</a>
+                <a href="index.php?action=about">A propos</a>
             </li>
             <li>
                 <a href="index.php?objet=article&amp;action=afficherListe">Articles</a>
@@ -27,12 +28,26 @@
             <li>
                 <a href="index.php?objet=image&amp;action=afficherListe">Images</a>
             </li>
+            <li>
+                <label class="btn" for="modal-one">
+                <i class="fa fa-user" aria-hidden="true">
+                {% if not est_connecte() %}
+                    Se connecter
+                {% else %}
+                    {{ global.session.login }}
+                {% endif %}
+                </i>
+                </label>
+            </li>
         </ul>
+        {{ include('frag/authentification.twig') }}
     </nav>
+
 </header>
 <main>
     <h2>{% block titre %}{% endblock %}</h2>
     {% block contenu %}{% endblock %}
 </main>
+{% block javascript %}{% endblock %}
 </body>
 </html>

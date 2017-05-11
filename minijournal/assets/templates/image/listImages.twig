@@ -11,13 +11,14 @@
         <ul>
             {% for image in images %}
                 <li>
-                    <a href="index.php?objet=image&amp;action=afficherDetail&amp;
-            idImage={{ image.id }}">{{ image.titre }}</a>
-                    <a href="index.php?objet=image&amp;action=editer&amp;idImage={{ image.id }}"> - Modifier -</a>
-                    <a href="index.php?objet=image&amp;action=supprimer&amp;idImage={{ image.id }}"> Supprimer -</a>
+                    <a href="index.php?objet=image&amp;action=afficherDetail&amp;idImage={{ image.id }}">{{ image.titre }}</a>
+                    {% if global.session.login  == image.auteur or global.session.statut == 'admin' %}
+                    <a href="index.php?objet=image&amp;action=editer&amp;idImage={{ image.id }}" class="button bouton-modification"><span>Modifier</span></a>
+                    <a href="index.php?objet=image&amp;action=supprimer&amp;idImage={{ image.id }}" class="button bouton-suppression"><span>Supprimer</span></a>
+                    {% endif %}
                 </li>
             {% endfor %}
         </ul>
     {% endif %}
-    <div><a href="index.php?objet=image&amp;action=editer"> Nouvelle image</a></div>
+    <div><a href="index.php?objet=image&amp;action=editer">Nouvelle image</a></div>
 {% endblock %}

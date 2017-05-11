@@ -36,7 +36,9 @@ class NettoyeurManager
         foreach ($this->nettoyeurs as $nettoyeurItem) {
             $propriete = $nettoyeurItem[0];
             $nettoyeur = $nettoyeurItem[1];
-            $form[$propriete] = $nettoyeur->nettoyer($form[$propriete]);
+            if (isset($form[$propriete])) {
+                $form[$propriete] = $nettoyeur->nettoyer($form[$propriete]);
+            }
         }
         return $form;
     }

@@ -1,19 +1,22 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700');
+/*@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700');*/
 
 html, body {
     margin: 0;
     padding: 0;
-    font-family: "Open Sans Condensed", sans-serif ;
-    font-weight: 300;
     font-size: 1em;
 }
 
-a {
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+a:not(.button) {
     color: white;
     text-decoration: none;
 }
 
-a:hover {
+a:not(.button):hover {
     color: #F37360;
 }
 
@@ -33,16 +36,6 @@ main {
 
 h1 {
     margin: 0;
-    font-family: 'Open Sans Condensed', sans-serif;
-}
-
-#menu_principal ul {
-    display: flex;
-    flex-direction: row;
-}
-
-#menu_principal ul li {
-    margin-right: 1rem;
 }
 
 ul {
@@ -53,6 +46,165 @@ i {
     margin-right : 0.5rem;
 }
 
-main a {
-    color: black;
+main a:not(.button) {
+    color: #F37360;
+}
+
+main a:not(.button):hover {
+    font-weight: 700;
+}
+
+/* Header */
+
+/** Menu principal **/
+
+#menu_principal ul {
+    display: flex;
+    flex-direction: row;
+}
+
+#menu_principal ul li {
+    margin-right: 1rem;
+}
+
+.fa-user {
+    color: white;
+    cursor: pointer;
+}
+
+.fa-user:hover {
+    color: #F37360;
+}
+
+/** User modal **/
+
+.modal .btn-close {
+    color: #aaa;
+    cursor: pointer;
+    font-size: 3rem;
+    position: absolute;
+    top: 0;
+    right: 5px;
+    text-decoration: none;
+}
+
+.modal .btn-close:hover, .modal .btn-close:focus {
+    color: #999
+}
+
+.modal-wrap:before {
+    content: '';
+    display: none;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 101
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 102
+}
+
+.modal-open:checked ~ .modal-wrap:before, .modal-open:checked ~ .modal-wrap .modal-overlay {
+    display: block
+}
+
+.modal-open:checked ~ .modal-wrap .modal-dialog {
+    transform: translate(-50%, -50%);
+    position: fixed;
+    top: 40%
+}
+
+.modal-dialog {
+    background: #fefefe;
+    border: #555 solid 1px;
+    border-radius: 5px;
+    position: fixed;
+    left: 50%;
+    top: -100%;
+    transform: translate(-50%, -150%);
+    transition: transform .6s ease-in-out;
+    width: 80%;
+    max-width: 600px;
+    z-index: 103
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-body p {
+    margin: 0
+}
+
+.modal-header, .modal-footer {
+    padding: 20px 20px
+}
+
+.modal-header {
+    border-bottom: #eaeaea solid 1px;
+}
+
+.modal-header h2 {
+    font-size: 2rem;
+    margin: 0
+}
+
+/* Boutons*/
+
+.button {
+    vertical-align: middle;
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #F37360;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.6rem;
+    width: auto;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.bouton-modification {
+    background-color: #84DBFF;
+}
+
+.bouton-modification, .bouton-suppression {
+    margin: 0 0.5rem;
 }

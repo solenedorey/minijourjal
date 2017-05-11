@@ -1,11 +1,11 @@
 <?php
-namespace Sd\Framework\Nettoyeur;
+namespace Sd\Framework\Nettoyeurs;
 
 use Sd\Framework\AppInterfaces\NettoyeurInterface;
 
 /**
  * Classe Trim supprimant les espaces en début et fin de chaîne.
- * @package Sd\Framework\Nettoyeur
+ * @package Sd\Framework\Nettoyeurs
  */
 class Trim implements NettoyeurInterface
 {

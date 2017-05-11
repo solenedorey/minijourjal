@@ -1,11 +1,11 @@
 <?php
-namespace Sd\Framework\Nettoyeur;
+namespace Sd\Framework\Nettoyeurs;
 
 use Sd\Framework\AppInterfaces\NettoyeurInterface;
 
 /**
  * Classe StripTags supprimant les balises HTML et PHP d'une chaîne.
- * @package Sd\Framework\Nettoyeur
+ * @package Sd\Framework\Nettoyeurs
  */
 class StripTags implements NettoyeurInterface
 {

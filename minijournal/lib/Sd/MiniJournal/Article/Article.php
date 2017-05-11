@@ -2,6 +2,7 @@
 namespace Sd\MiniJournal\Article;
 
 use Sd\Framework\AbstractClasses\AbstractDocument;
+use Sd\MiniJournal\Image\ImageBd;
 
 /**
  * Classe Article
@@ -12,19 +13,23 @@ class Article extends AbstractDocument
     /**
      * @var
      */
-    private $auteur;
-    /**
-     * @var
-     */
     private $chapo;
+
     /**
      * @var
      */
     private $contenu;
+
+    /**
+     * @var
+     */
+    private $listImages = array();
+
     /**
      * @var
      */
     private $statutPublication;
+
     /**
      * @var
      */
@@ -37,6 +42,7 @@ class Article extends AbstractDocument
      * @param $auteur
      * @param $chapo
      * @param $contenu
+     * @param $listImages
      * @param $statutPublication
      * @param $dateCreation
      * @param $datePublication
@@ -47,16 +53,32 @@ class Article extends AbstractDocument
         $auteur,
         $chapo,
         $contenu,
+        $listImages,
         $statutPublication,
         $dateCreation,
         $datePublication
     ) {
-        parent::__construct($idArticle, $titre, $dateCreation);
-        $this->auteur = $auteur;
+        parent::__construct($idArticle, $titre, $auteur, $dateCreation);
         $this->chapo = $chapo;
         $this->contenu = $contenu;
+        $this->listImages = $listImages;
         $this->statutPublication = $statutPublication;
         $this->datePublication = $datePublication;
+    }
+
+    /**
+     * Permet de savoir si une image est liée à un article.
+     * @param $id
+     * @return string
+     */
+    public function imageSelectionnee($id)
+    {
+        $images = $this->getListImages();
+        $idImages = array();
+        foreach ($images as $image) {
+            $idImages[] = $image->getId();
+        }
+        return in_array($id, $idImages) ? 'checked' : '';
     }
 
     /**
@@ -65,7 +87,7 @@ class Article extends AbstractDocument
      */
     public static function creerDocumentVide()
     {
-        return new self("", "", "", "", "", "", "", "");
+        return new self('', '', '', '', '', '', '', '', '');
     }
 
     /**
@@ -79,11 +101,28 @@ class Article extends AbstractDocument
         $auteur = isset($data['auteur']) && $data['auteur'] != '' ? $data['auteur'] : '';
         $chapo = isset($data['chapo']) && $data['chapo'] != '' ? $data['chapo'] : '';
         $contenu = isset($data['contenu']) && $data['contenu'] != '' ? $data['contenu'] : '';
+        $listImages = array();
+        if (isset($data['images']) && $data['images'] != '') {
+            $imageBd = new ImageBd();
+            foreach ($data['images'] as $image) {
+                $listImages[] = $imageBd->lire($image);
+            }
+        }
         $statutPublication = isset($data['statutPublication']) &&
         $data['statutPublication'] != '' ? $data['statutPublication'] : '';
         $dateCreation = date('Y-m-d', time());
         $datePublication = $statutPublication === 2 ? date('Y-m-d', time()) : null;
-        return new self(null, $titre, $auteur, $chapo, $contenu, $statutPublication, $dateCreation, $datePublication);
+        return new self(
+            null,
+            $titre,
+            $auteur,
+            $chapo,
+            $contenu,
+            $listImages,
+            $statutPublication,
+            $dateCreation,
+            $datePublication
+        );
     }
 
     /**
@@ -105,6 +144,14 @@ class Article extends AbstractDocument
         if (isset($data['contenu'])) {
             $this->setContenu($data['contenu']);
         }
+        if (isset($data['images'])) {
+            $imageBd = new ImageBd();
+            $listImages = array();
+            foreach ($data['images'] as $image) {
+                $listImages[] = $imageBd->lire($image);
+            }
+            $this->setListImages($listImages);
+        }
         if (isset($data['statutPublication'])) {
             $this->setStatutPublication($data['statutPublication']);
         }
@@ -113,22 +160,6 @@ class Article extends AbstractDocument
         } else {
             $this->setDatePublication(null);
         }
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getAuteur()
-    {
-        return $this->auteur;
-    }
-
-    /**
-     * @param $auteur
-     */
-    public function setAuteur($auteur)
-    {
-        $this->auteur = $auteur;
     }
 
     /**
@@ -161,6 +192,22 @@ class Article extends AbstractDocument
     public function setContenu($contenu)
     {
         $this->contenu = $contenu;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getListImages()
+    {
+        return $this->listImages;
+    }
+
+    /**
+     * @param mixed $listImages
+     */
+    public function setListImages($listImages)
+    {
+        $this->listImages = $listImages;
     }
 
     /**

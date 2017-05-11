@@ -1,17 +1,43 @@
 {% extends 'page.twig' %}
 
+{% block meta %}
+    <!-- Métadonnées du DublinCore -->
+    <meta name="DC.title" content="{{ image.titre }}"/>
+    <meta name="DC.Creator" content="{{ image.auteur }}">
+    <meta name="DC.Description" content="Une image représentant {{ image.titre }}, dans l'univers d'Harry Potter">
+    <meta name="DC.Publisher" content="{{ image.auteur }}">
+    <meta name="DC.Date" content="{{ image.dateCreation }}">
+    <!-- Métadonnées Facebook -->
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="{{ image.titre }}"/>
+    <meta property="og:image"
+          content="https://dev-21304033.users.info.unicaen.fr/Master/Programmation Objet/TP9/minijournal/{{ constant('IMAGE_BASEFILE')~image.fichier }}"/>
+    <meta property="og:description" content="Une image représentant {{ image.titre }}, dans l'univers d'Harry Potter"/>
+    <!-- Métadonnées Twitter -->
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="{{ request_uri() }}"/>
+    <meta name="twitter:title" content="{{ image.titre }}"/>
+    <meta name="twitter:description" content="Une image représentant {{ image.titre }}, dans l'univers d'Harry Potter"/>
+    <meta name="twitter:image"
+          content="https://dev-21304033.users.info.unicaen.fr/Master/Programmation Objet/TP9/minijournal/{{ constant('IMAGE_BASEFILE')~image.fichier }}"/>
+
+{% endblock %}
+
 {% block titre %}
     Détail de l'image
 {% endblock %}
 
 {% block contenu %}
-    <figure>
-        <figcaption>
+    <a href="index.php?objet=image&amp;action=afficherListe">Liste des images</a>
+    <figure itemscope itemtype="http://schema.org/ImageObject">
+        <figcaption itemprop="caption">
             <h2>{{ image.titre }}</h2>
-            <h3>{{ image.auteur }}</h3>
+            <h3>Auteur : {{ image.auteur }}</h3>
             <p>Date de création : {{ image.dateCreation }}</p>
         </figcaption>
-        <img src="{{ constant('IMAGE_BASEFILE')~image.fichier }}" alt="{{ image.titre }}">
+        <a href="https://dev-21304033.users.info.unicaen.fr/Master/Programmation Objet/TP9/minijournal/{{ constant('IMAGE_BASEFILE')~image.fichier }}"><img
+                    itemprop="url" src="{{ constant('IMAGE_BASEFILE')~image.fichier }}" alt="{{ image.titre }}"></a>
+        <meta itemprop="width" content="auto">
+        <meta itemprop="height" content="auto">
     </figure>
-    <h3><a href="index.php?objet=image&amp;action=afficherListe">Liste des images</a></h3>
 {% endblock %}

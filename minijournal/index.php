@@ -13,10 +13,13 @@ use Sd\MiniJournal\Router\Router;
 
 try {
 
+    session_name(NOM_SESSION);
+    session_start();
+
     /**
      * Initialiser Requete et Reponse
      */
-    $requete = new Requete($_GET, $_POST, $_FILES);
+    $requete = new Requete($_SESSION, $_GET, $_POST, $_FILES);
     $reponse = new Reponse();
 
     $router = new Router($requete);
@@ -31,7 +34,7 @@ try {
     $reponse->setFile('errorPage.twig');
     if (MODE_DEV) {
         $erreur = $e->getMessage();
-        $erreur .= nl2br($e->getTraceAsString());
+        $erreur .= '<br>' . nl2br($e->getTraceAsString());
         $reponse->setFragments(array('erreur' => $erreur));
     } else {
         $erreur = "<p>Une erreur d'exécution s'est produite.</p>";
@@ -40,7 +43,9 @@ try {
     header("HTTP/1.0 404 Not Found");
 }
 
+$requete->synchroniserSession();
+
 /**
  * Récupérer les contenus de la page et les mettre dans les variables du template de page
  */
-echo (new Twig())->getTwig()->render($reponse->getFile(), $reponse->getFragments());
+echo (new Twig($requete))->getTwig()->render($reponse->getFile(), $reponse->getFragments());

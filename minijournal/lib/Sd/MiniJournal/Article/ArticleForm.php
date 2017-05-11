@@ -4,9 +4,11 @@ namespace Sd\MiniJournal\Article;
 use Sd\Framework\AbstractClasses\AbstractDocumentForm;
 use Sd\Framework\Managers\NettoyeurManager;
 use Sd\Framework\Managers\ValidateurManager;
+
 //Nettoyeurs
-use Sd\Framework\Nettoyeur\StripTags;
-use Sd\Framework\Nettoyeur\Trim;
+use Sd\Framework\Nettoyeurs\StripTags;
+use Sd\Framework\Nettoyeurs\Trim;
+
 //Validateurs
 use Sd\Framework\Validateurs\ChaineNonVide;
 use Sd\Framework\Validateurs\EmailValide;
@@ -33,7 +35,7 @@ class ArticleForm extends AbstractDocumentForm
             ->ajouter('chapo', new Trim())
             ->ajouter('chapo', new StripTags())
             ->ajouter('contenu', new Trim())
-            ->ajouter('contenu', new StripTags('<p><em><strong><u><ul><li>'));
+            ->ajouter('contenu', new StripTags('<p><em><strong><u><ul><li><h3><h4><h5><h6><h7>'));
         return $nettoyeurManager;
     }
 
@@ -47,7 +49,7 @@ class ArticleForm extends AbstractDocumentForm
         $validateurManager->ajouter('titre', new ChaineNonVide())
             ->ajouter('titre', new LongueurMaxi(255))
             ->ajouter('auteur', new ChaineNonVide())
-            ->ajouter('auteur', new EmailValide())
+            //->ajouter('auteur', new EmailValide())
             ->ajouter('chapo', new ChaineNonVide())
             ->ajouter('chapo', new LongueurMaxi(255))
             ->ajouter('contenu', new LongueurMini(255));

@@ -1,4 +1,4 @@
-{%  extends 'page.twig' %}
+{% extends 'layout.twig' %}
 
 {% block titre %}
     Editer l'article
@@ -7,27 +7,41 @@
 {% block contenu %}
     <form action="index.php?objet=article&amp;action=enregistrer" method="post">
         {% if article.id is not empty %}
-        <input type="hidden" id="id" name="id" value="{{ article.id }}"/>
+            <input type="hidden" id="id" name="id" value="{{ article.id }}"/>
         {% endif %}
         <div>
             <label for="titre">Titre</label>
             <input type="text" id="titre" name="titre" value="{{ article.titre }}" required/>
             {{ erreurs.titre is defined ? display_errors(erreurs.titre) : null }}
         </div>
-        <div>
-            <label for="auteur">Auteur</label>
-            <input type="text" id="auteur" name="auteur" value="{{ article.auteur }}" required/>
-            {{ erreurs.auteur is defined ? display_errors(erreurs.auteur) : null }}
-        </div>
+
+        <input type="hidden" id="auteur" name="auteur" value="{{ global.session.login }}" required/>
+        {{ erreurs.auteur is defined ? display_errors(erreurs.auteur) : null }}
+
         <div>
             <label for="chapo">Chapo</label>
-            <input type="text" id="chapo" name="chapo" value="{{ article.chapo }}" required/>
+            <textarea id="chapo" name="chapo" required>{{ article.chapo }}</textarea>
             {{ erreurs.chapo is defined ? display_errors(erreurs.chapo) : null }}
         </div>
         <div>
             <label for="contenu">Contenu principal</label>
             <textarea id="contenu" name="contenu" required>{{ article.contenu }}</textarea>
             {{ erreurs.contenu is defined ? display_errors(erreurs.contenu) : null }}
+        </div>
+        <div>
+            <fieldset>
+                <legend>Ajouter des images</legend>
+                {% if images %}
+                    {% for image in images %}
+                        <label for="{{ image.id }}">{{ image.id }}</label>
+                        <input type="checkbox" value="{{ image.id }}" id="{{ image.id }}" name="images[]"
+                                {{ article.id is not empty ? article.imageSelectionnee(image.id) : '' }}/>
+                    {% endfor %}
+                {% else %}
+                    <p>Aucune image n'a été ajoutée.</p>
+                    <a href="index.php?objet=image&amp;action=editer">Ajouter une nouvelle image</a>
+                {% endif %}
+            </fieldset>
         </div>
         <div>
             <label for="statutPublication">Statut de publication</label>
@@ -37,11 +51,11 @@
             </select>
             {{ erreurs.statutPublication is defined ? display_errors(erreurs.statutPublication) : null }}
         </div>
-        <div class="button">
-            <button type="submit">{{ article.id is not empty ? 'Modifier' : 'Enregistrer' }}</button>
-        </div>
+        <button class="button" type="submit"><span>{{ article.id is not empty ? 'Modifier' : 'Enregistrer'
+            }}</span></button>
     </form>
     <script type="text/javascript">
         CKEDITOR.replace('contenu');
+        CKEDITOR.replace('chapo');
     </script>
 {% endblock %}

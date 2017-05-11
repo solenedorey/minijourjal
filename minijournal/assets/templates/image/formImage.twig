@@ -9,15 +9,12 @@
         {% if image.id is not empty %}
         <input type="hidden" id="id" name="id" value="{{ image.id }}"/>
         {% endif %}
+        <input type="hidden" id="auteur" name="auteur" value="{{ global.session.login }}" required/>
+        {{ erreurs.auteur is defined ? display_errors(erreurs.auteur) : null }}
         <div>
             <label for="titre">Titre</label>
             <input type="text" id="titre" name="titre" value="{{ image.titre }}" required/>
             {{ erreurs.titre is defined ? display_errors(erreurs.titre) : null }}
-        </div>
-        <div>
-            <label for="auteur">Auteur</label>
-            <input type="text" id="auteur" name="auteur" value="{{ image.auteur }}" required/>
-            {{ erreurs.auteur is defined ? display_errors(erreurs.auteur) : null }}
         </div>
         <div>
             <label for="auteur">Image</label>

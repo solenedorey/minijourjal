@@ -1,7 +1,8 @@
 <?php
-
 namespace Sd\Framework\Controller;
 
+use Sd\Framework\Exceptions\AuthentificationException;
+use Sd\Framework\Managers\AuthentificationManager;
 use Sd\MiniJournal\Router\Router;
 use Sd\Framework\HttpFoundation\Reponse;
 use Sd\Framework\HttpFoundation\Requete;
@@ -20,7 +21,7 @@ class FrontController
     /**
      * @var Requete
      */
-    protected $request;
+    protected $requete;
 
     /**
      * @var Reponse
@@ -29,13 +30,14 @@ class FrontController
 
     /**
      * Constructeur de la classe FrontController.
+     * @param Router $router
      * @param Requete $requete
      * @param Reponse $reponse
      */
     public function __construct(Router $router, Requete $requete, Reponse $reponse)
     {
         $this->router = $router;
-        $this->request = $requete;
+        $this->requete = $requete;
         $this->response = $reponse;
     }
 
@@ -45,8 +47,17 @@ class FrontController
      */
     public function execute()
     {
+        $authManager = AuthentificationManager::getInstance($this->requete);
+        $formData = $this->requete->getPost();
+        if (isset($formData['auth_login']) && isset($formData['auth_password'])) {
+            try {
+                $authManager->connexion($formData['auth_login'], $formData['auth_password']);
+            } catch (AuthentificationException $e) {
+                $erreur = $e->getMessage();
+            }
+        }
         $className = $this->router->getControllerClassName();
-        $controller = new $className($this->request, $this->response);
+        $controller = new $className($this->requete, $this->response);
         $action = $this->router->getControllerAction();
         $controller->execute($action);
     }

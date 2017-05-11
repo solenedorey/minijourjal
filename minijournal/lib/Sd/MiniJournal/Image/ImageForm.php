@@ -5,8 +5,8 @@ use Sd\Framework\AbstractClasses\AbstractDocumentForm;
 use Sd\Framework\Managers\NettoyeurManager;
 use Sd\Framework\Managers\ValidateurManager;
 //Nettoyeurs
-use Sd\Framework\Nettoyeur\StripTags;
-use Sd\Framework\Nettoyeur\Trim;
+use Sd\Framework\Nettoyeurs\StripTags;
+use Sd\Framework\Nettoyeurs\Trim;
 //Validateurs
 use Sd\Framework\Validateurs\ChaineNonVide;
 use Sd\Framework\Validateurs\EmailValide;
@@ -44,7 +44,7 @@ class ImageForm extends AbstractDocumentForm
         $validateurManager->ajouter('titre', new ChaineNonVide())
             ->ajouter('titre', new LongueurMaxi(255))
             ->ajouter('auteur', new ChaineNonVide())
-            ->ajouter('auteur', new EmailValide())
+            //->ajouter('auteur', new EmailValide())
             ->ajouter('fichier', new TypeMimeValide(array('image/jpeg')))
             ->ajouter('fichier', new TailleFichierValide(3145728));
         return $validateurManager;

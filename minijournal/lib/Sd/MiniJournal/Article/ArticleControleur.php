@@ -4,6 +4,7 @@ namespace Sd\MiniJournal\Article;
 use Sd\Framework\AbstractClasses\AbstractControleur;
 use Sd\Framework\HttpFoundation\Reponse;
 use Sd\Framework\HttpFoundation\Requete;
+use Sd\MiniJournal\Image\ImageBd;
 
 /**
  * Classe ArticleControleur
@@ -15,10 +16,6 @@ class ArticleControleur extends AbstractControleur
      * @var ArticleBd
      */
     private $articleBd;
-    /**
-     * @var Requete
-     */
-    private $requete;
 
     /**
      * Constructeur de la classe ArticleControleur.
@@ -28,8 +25,29 @@ class ArticleControleur extends AbstractControleur
     public function __construct(Requete $requete, Reponse $reponse)
     {
         $this->articleBd = new ArticleBd();
-        $this->requete = $requete;
-        parent::__construct($reponse);
+        parent::__construct($requete, $reponse);
+    }
+
+    /**
+     *
+     */
+    public function inverseStatutPublication()
+    {
+        $idArticle = $this->requete->getItemGet('idArticle');
+        $article = $this->articleBd->lire($idArticle);
+        $this->roleManager->verifyAccess('auteur', $article);
+        $article->setStatutPublication($article->getStatutPublication() == 2 ? 1 : 2);
+        $article->setDatePublication($article->getStatutPublication() == 2 ? date('Y-m-d', time()) : null);
+        $this->articleBd->persister($article);
+        $this->afficherDetail();
+    }
+
+    /**
+     * Action par défaut de l'objet Article -> affiche la liste des articles.
+     */
+    public function home()
+    {
+        $this->afficherListe();
     }
 
     /**
@@ -37,7 +55,11 @@ class ArticleControleur extends AbstractControleur
      */
     public function afficherListe()
     {
-        $articles = $this->articleBd->lireTous();
+        if ($this->roleManager->verifyAccess('auteur', null, false)) {
+            $articles = $this->articleBd->lireTous();
+        } else {
+            $articles = $this->articleBd->lireTous(true);
+        }
         $this->afficheur('article/listArticles.twig', array('articles' => $articles));
     }
 
@@ -64,10 +86,14 @@ class ArticleControleur extends AbstractControleur
         if (!is_null($this->requete->getItemGet('idArticle'))) {
             $idArticle = $this->requete->getItemGet('idArticle');
             $article = $this->articleBd->lire($idArticle);
+            $this->roleManager->verifyAccess('auteur', $article);
         } else {
             $article = Article::creerDocumentVide();
+            $this->roleManager->verifyAccess('auteur');
         }
-        $this->afficheur('article/formArticle.twig', array('article' => $article));
+        $imageBd = new ImageBd();
+        $images = $imageBd->lireTous();
+        $this->afficheur('article/formArticle.twig', array('article' => $article, 'images' => $images));
     }
 
     /**
@@ -86,17 +112,20 @@ class ArticleControleur extends AbstractControleur
             $idArticle = (int)$this->requete->getItemPost('id');
             $article = $this->articleBd->lire($idArticle);
             $article->modifierDepuisTableau($formData);
+            $this->roleManager->verifyAccess('auteur', $article);
         } else {
             $article = Article::creerDepuisTableau($formData);
+            $this->roleManager->verifyAccess('auteur');
         }
         $form = new ArticleForm($article);
         if ($form->estValide()) {
             $this->articleBd->persister($article) or die("Problème d'enregistrement en BD");
             $this->afficheur('article/detailsArticle.twig', array('article' => $article));
         } else {
+            $images = (new ImageBd())->lireTous();
             $this->afficheur(
                 'article/formArticle.twig',
-                array('article' => $article, 'erreurs' => $form->getErreurs())
+                array('article' => $article,'images' => $images, 'erreurs' => $form->getErreurs())
             );
         }
     }
@@ -107,7 +136,11 @@ class ArticleControleur extends AbstractControleur
     public function supprimer()
     {
         $idArticle = $_GET['idArticle'];
-        $this->articleBd->supprimer($idArticle);
-        header('Location: index.php?objet=article&action=afficherListe');
+        $article = $this->articleBd->lire($idArticle);
+        $this->roleManager->verifyAccess('auteur', $article);
+        if ($article->getStatutPublication() == 1) {
+            $this->articleBd->supprimer($idArticle);
+        }
+        $this->afficherListe();
     }
 }

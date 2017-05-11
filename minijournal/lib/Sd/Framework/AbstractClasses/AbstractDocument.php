@@ -22,6 +22,12 @@ abstract class AbstractDocument implements DocumentInterface
     protected $titre;
 
     /**
+     * Auteur du document
+     * @var string
+     */
+    protected $auteur;
+
+    /**
      * Date de création du document.
      * @var string
      */
@@ -31,12 +37,14 @@ abstract class AbstractDocument implements DocumentInterface
      * Constructeur de la classe AbstractDocument.
      * @param $id
      * @param $titre
+     * @param $auteur
      * @param $dateCreation
      */
-    protected function __construct($id, $titre, $dateCreation)
+    protected function __construct($id, $titre, $auteur, $dateCreation)
     {
         $this->id = $id;
         $this->titre = $titre;
+        $this->auteur = $auteur;
         $this->dateCreation = $dateCreation;
     }
 
@@ -46,6 +54,14 @@ abstract class AbstractDocument implements DocumentInterface
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
     }
 
     /**
@@ -62,6 +78,22 @@ abstract class AbstractDocument implements DocumentInterface
     public function setTitre($titre)
     {
         $this->titre = $titre;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAuteur()
+    {
+        return $this->auteur;
+    }
+
+    /**
+     * @param string $auteur
+     */
+    public function setAuteur($auteur)
+    {
+        $this->auteur = $auteur;
     }
 
     /**

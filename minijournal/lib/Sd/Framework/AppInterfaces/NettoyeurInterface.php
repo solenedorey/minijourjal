@@ -2,7 +2,7 @@
 namespace Sd\Framework\AppInterfaces;
 
 /**
- * Interface NettoyeurInterface définissant les méthodes obligatoires pour tout objet de type Nettoyeur.
+ * Interface NettoyeurInterface définissant les méthodes obligatoires pour tout objet de type Nettoyeurs.
  * @package Sd\Framework\AppInterfaces
  */
 interface NettoyeurInterface

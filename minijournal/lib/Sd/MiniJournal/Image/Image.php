@@ -12,10 +12,6 @@ class Image extends AbstractDocument
     /**
      * @var
      */
-    private $auteur;
-    /**
-     * @var
-     */
     private $fichier;
 
     /**
@@ -33,25 +29,8 @@ class Image extends AbstractDocument
         $fichier,
         $dateCreation
     ) {
-        parent::__construct($idImage, $titre, $dateCreation);
-        $this->auteur = $auteur;
+        parent::__construct($idImage, $titre, $auteur, $dateCreation);
         $this->fichier = $fichier;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getAuteur()
-    {
-        return $this->auteur;
-    }
-
-    /**
-     * @param $auteur
-     */
-    public function setAuteur($auteur)
-    {
-        $this->auteur = $auteur;
     }
 
     /**

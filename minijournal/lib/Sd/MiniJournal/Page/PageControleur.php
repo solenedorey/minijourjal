@@ -4,6 +4,7 @@ namespace Sd\MiniJournal\Page;
 use Sd\Framework\AbstractClasses\AbstractControleur;
 use Sd\Framework\HttpFoundation\Reponse;
 use Sd\Framework\HttpFoundation\Requete;
+use Sd\Framework\Managers\AuthentificationManager;
 
 /**
  * Classe PageControleur
@@ -12,11 +13,6 @@ use Sd\Framework\HttpFoundation\Requete;
 class PageControleur extends AbstractControleur
 {
     /**
-     * @var Requete
-     */
-    private $requete;
-
-    /**
      * Constructeur de la classe PageControleur.
      * @param Requete $requete
      * @param Reponse $reponse
@@ -24,7 +20,7 @@ class PageControleur extends AbstractControleur
     public function __construct(Requete $requete, Reponse $reponse)
     {
         $this->requete = $requete;
-        parent::__construct($reponse);
+        parent::__construct($requete, $reponse);
     }
 
     /**
@@ -41,5 +37,14 @@ class PageControleur extends AbstractControleur
     public function home()
     {
         $this->afficheur('index.twig');
+    }
+
+    /**
+     * Permet la déconnexion de l'utilisateur connecté et redirige vers l'accueil.
+     */
+    public function deconnexion()
+    {
+        AuthentificationManager::getInstance($this->requete)->deconnexion();
+        header('Location: index.php');
     }
 }

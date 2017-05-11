@@ -11,6 +11,7 @@ class Reponse
      * @var array
      */
     private $fragments;
+
     /**
      * @var
      */

@@ -2,6 +2,8 @@
 namespace Sd\Framework\AbstractClasses;
 
 use Sd\Framework\HttpFoundation\Reponse;
+use Sd\Framework\HttpFoundation\Requete;
+use Sd\MiniJournal\Managers\RoleManager;
 
 /**
  * Classe AbstractControleur
@@ -10,17 +12,29 @@ use Sd\Framework\HttpFoundation\Reponse;
 abstract class AbstractControleur
 {
     /**
+     * @var Requete
+     */
+    protected $requete;
+
+    /**
      * @var Reponse
      */
-    private $reponse;
+    protected $reponse;
+
+    /**
+     * @var RoleManager
+     */
+    protected $roleManager;
 
     /**
      * Constructeur de la classe AbstractControleur.
      * @param $reponse
      */
-    public function __construct(Reponse $reponse)
+    public function __construct(Requete $requete, Reponse $reponse)
     {
+        $this->requete = $requete;
         $this->reponse = $reponse;
+        $this->roleManager = RoleManager::getInstance();
     }
 
     /**

@@ -51,7 +51,8 @@ abstract class AbstractDocumentForm implements FormInterface
     }
 
     /**
-     * Permet de récupérer les actions de nettoyage à réaliser sur les différentes valeurs et d'exécuter ces actions.
+     * Permet de récupérer les actions de nettoyage à réaliser sur les différentes valeurs
+     * et d'exécuter ces actions.
      * @param $form
      * @return mixed
      */
@@ -63,7 +64,8 @@ abstract class AbstractDocumentForm implements FormInterface
     }
 
     /**
-     * Permet de récupérer les actions de validation à réaliser sur les différentes valeurs et d'exécuter ces actions.
+     * Permet de récupérer les actions de validation à réaliser sur les différentes valeurs
+     * et d'exécuter ces actions.
      * @return bool
      */
     public function estValide()

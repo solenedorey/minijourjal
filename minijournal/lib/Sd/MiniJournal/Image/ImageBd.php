@@ -36,10 +36,11 @@ class ImageBd extends AbstractDocumentBd
         $requete = "SELECT * 
         FROM " . self::TABLE_NAME . " 
         WHERE id_image = :idImage";
-        $row = parent::requete($requete, true, array(':idImage' => $idImage))[0];
+        $row = parent::requete($requete, true, array(':idImage' => $idImage));
         if ($row == false) {
             throw new \Exception("Image non trouvée en bd");
         }
+        $row = $row[0];
         $image = new Image(
             $row['id_image'],
             $row['titre'],
